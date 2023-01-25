@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
