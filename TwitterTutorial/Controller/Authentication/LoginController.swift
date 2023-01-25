@@ -19,6 +19,16 @@ class LoginController: UIViewController {
         return iv
     }()
     
+    private lazy var emailContainerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private lazy var passwordContainerView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
