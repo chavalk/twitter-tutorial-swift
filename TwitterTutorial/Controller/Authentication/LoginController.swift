@@ -23,6 +23,7 @@ class LoginController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
     }
 }
