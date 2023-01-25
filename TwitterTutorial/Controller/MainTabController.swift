@@ -24,7 +24,8 @@ class MainTabController: UITabBarController {
     func configureViewControllers() {
         
         let feed = FeedController()
-        feed.tabBarItem.image = UIImage(named: "home_unselected")
+        let nav1 = UINavigationController(rootViewController: feed)
+        nav1.tabBarItem.image = UIImage(named: "home_unselected")
         
         let explore = ExploreController()
         explore.tabBarItem.image = UIImage(named: "search_unselected")
@@ -35,6 +36,6 @@ class MainTabController: UITabBarController {
         let conversations = ConversationsController()
         conversations.tabBarItem.image = UIImage(named: "search_unselected")
         
-        viewControllers = [feed, explore, notifications, conversations]
+        viewControllers = [nav1, explore, notifications, conversations]
     }
 }
