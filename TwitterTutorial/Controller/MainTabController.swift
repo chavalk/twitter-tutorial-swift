@@ -20,4 +20,8 @@ class MainTabController: UITabBarController {
     }
     
     // MARK: - Helpers
+    
+    func configureViewControllers() {
+        
+    }
 }
