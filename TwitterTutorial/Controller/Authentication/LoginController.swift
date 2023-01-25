@@ -11,6 +11,14 @@ class LoginController: UIViewController {
     
     // MARK: - Properties
     
+    private let logoImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.image = UIImage(named: "TwitterLogo")
+        return iv
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -25,5 +33,7 @@ class LoginController: UIViewController {
         view.backgroundColor = .twitterBlue
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isHidden = true
+        
+        view.addSubview(logoImageView)
     }
 }
