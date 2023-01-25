@@ -29,6 +29,10 @@ class MainTabController: UITabBarController {
     
     // MARK: - Helpers
     
+    func configureUI() {
+        view.addSubview(actionButton)
+    }
+    
     func configureViewControllers() {
         
         let feed = FeedController()
