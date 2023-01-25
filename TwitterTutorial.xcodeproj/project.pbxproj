@@ -13,6 +13,7 @@
 		BE6B62A12980DBFF00654BC2 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B62A02980DBFF00654BC2 /* ConversationsController.swift */; };
 		BEA715D02981DC01001676A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715CF2981DC01001676A8 /* Extensions.swift */; };
 		BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D22981EE8F001676A8 /* LoginController.swift */; };
+		BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D42981EF9E001676A8 /* RegistrationController.swift */; };
 		BEE599D4297F9F7800518557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D3297F9F7800518557 /* AppDelegate.swift */; };
 		BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D5297F9F7800518557 /* SceneDelegate.swift */; };
 		BEE599DD297F9F7C00518557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE599DC297F9F7C00518557 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		BE6B62A02980DBFF00654BC2 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		BEA715CF2981DC01001676A8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BEA715D22981EE8F001676A8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		BEA715D42981EF9E001676A8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		BEE599D0297F9F7800518557 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE599D3297F9F7800518557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE599D5297F9F7800518557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA715D22981EE8F001676A8 /* LoginController.swift */,
+				BEA715D42981EF9E001676A8 /* RegistrationController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */,
 				BEE599F4297FA47B00518557 /* MainTabController.swift in Sources */,
 				BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */,
+				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
