@@ -11,6 +11,12 @@ class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
+    private let alreadyHaveAccountButton: UIButton = {
+        let button = Utilities().attributedButton("Already have an account?", " Log In")
+        button.addTarget(self, action: #selector(handleShowLogIn), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
