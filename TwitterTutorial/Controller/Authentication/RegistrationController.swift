@@ -25,6 +25,10 @@ class RegistrationController: UIViewController {
     }
     // MARK: - Selectors
     
+    @objc func handleShowLogIn() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
