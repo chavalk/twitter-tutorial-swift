@@ -23,6 +23,14 @@ class LoginController: UIViewController {
         let view = UIView()
         view.backgroundColor = .red
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        let iv = UIImageView()
+        iv.image = UIImage(named: "ic_mail_outline_white_2x-1")
+        
+        view.addSubview(iv)
+        iv.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8, paddingBottom: 8)
+        iv.setDimensions(width: 24, height: 24)
+        
         return view
     }()
     
