@@ -44,6 +44,8 @@ class Utilities {
         
         let attributedTitle = NSMutableAttributedString(string: firstPart, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
         
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        
         return button
     }
 }
