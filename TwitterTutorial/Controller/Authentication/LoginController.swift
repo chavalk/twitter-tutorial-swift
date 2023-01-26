@@ -31,6 +31,16 @@ class LoginController: UIViewController {
         return view
     }()
     
+    private let emailTextField: UITextField = {
+        let tf = UITextField()
+        return tf
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let tf = UITextField()
+        return tf
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
