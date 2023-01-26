@@ -33,5 +33,8 @@ class RegistrationController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        
+        view.addSubview(alreadyHaveAccountButton)
+        alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
     }
 }
