@@ -11,6 +11,14 @@ class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
+    private let plusPhotoButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "plus_photo"), for: .normal)
+        button.tintColor = .white
+        button.addTarget(self, action: #selector(handleAddProfilePhoto), for: .touchUpInside)
+        return button
+    }()
+    
     private lazy var emailContainerView: UIView = {
         let image = UIImage(named: "ic_mail_outline_white_2x-1")
         let view = Utilities().inputContainerView(withImage: image ?? UIImage(), textField: emailTextField)
@@ -70,6 +78,10 @@ class RegistrationController: UIViewController {
         configureUI()
     }
     // MARK: - Selectors
+    
+    @objc func handleAddProfilePhoto() {
+        print("Add photo...")
+    }
     
     @objc func handleShowLogIn() {
         navigationController?.popViewController(animated: true)
