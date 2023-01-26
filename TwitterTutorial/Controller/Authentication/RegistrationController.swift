@@ -112,7 +112,7 @@ class RegistrationController: UIViewController {
         plusPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor)
         plusPhotoButton.setDimensions(width: 128, height: 128)
         
-        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, fullNameContainerView, usernameContainerView])
+        let stack = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, fullNameContainerView, usernameContainerView, registrationButton])
         stack.axis = .vertical
         stack.spacing = 20
         stack.distribution = .fillEqually
