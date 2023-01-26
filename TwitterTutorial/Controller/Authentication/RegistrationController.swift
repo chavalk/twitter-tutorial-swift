@@ -23,6 +23,18 @@ class RegistrationController: UIViewController {
         return view
     }()
     
+    private lazy var fullNameContainerView: UIView = {
+        let image = UIImage(named: "ic_person_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image ?? UIImage(), textField: fullNameTextField)
+        return view
+    }()
+    
+    private lazy var usernameContainerView: UIView = {
+        let image = UIImage(named: "ic_person_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image ?? UIImage(), textField: usernameTextField)
+        return view
+    }()
+    
     private let emailTextField: UITextField = {
         let tf = Utilities().textField(withPlaceHolder: "Email")
         return tf
