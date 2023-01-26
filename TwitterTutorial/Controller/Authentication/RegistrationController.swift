@@ -11,6 +11,29 @@ class RegistrationController: UIViewController {
     
     // MARK: - Properties
     
+    private lazy var emailContainerView: UIView = {
+        let image = UIImage(named: "ic_mail_outline_white_2x-1")
+        let view = Utilities().inputContainerView(withImage: image ?? UIImage(), textField: emailTextField)
+        return view
+    }()
+    
+    private lazy var passwordContainerView: UIView = {
+        let image = UIImage(named: "ic_lock_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image ?? UIImage(), textField: passwordTextField)
+        return view
+    }()
+    
+    private let emailTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Email")
+        return tf
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Password")
+        tf.isSecureTextEntry = true
+        return tf
+    }()
+    
     private let alreadyHaveAccountButton: UIButton = {
         let button = Utilities().attributedButton("Already have an account?", " Log In")
         button.addTarget(self, action: #selector(handleShowLogIn), for: .touchUpInside)
