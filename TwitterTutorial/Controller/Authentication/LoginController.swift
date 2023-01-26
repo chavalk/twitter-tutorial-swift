@@ -69,7 +69,7 @@ class LoginController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleShowSignUp() {
-        print("Show sing up...")
+        print("Show sign up...")
     }
     
     @objc func handleLogin() {
