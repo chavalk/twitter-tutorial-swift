@@ -50,7 +50,7 @@ class LoginController: UIViewController {
         button.heightAnchor.constraint(lessThanOrEqualToConstant: 50).isActive = true
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        button.addTarget(LoginController.self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
