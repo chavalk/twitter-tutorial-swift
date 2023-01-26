@@ -50,6 +50,7 @@ class LoginController: UIViewController {
         button.heightAnchor.constraint(lessThanOrEqualToConstant: 50).isActive = true
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
@@ -60,6 +61,10 @@ class LoginController: UIViewController {
         configureUI()
     }
     // MARK: - Selectors
+    
+    @objc func handleLogin() {
+        print("Handle login here...")
+    }
     
     // MARK: - Helpers
     
