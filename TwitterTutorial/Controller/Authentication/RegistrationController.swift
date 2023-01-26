@@ -71,6 +71,18 @@ class RegistrationController: UIViewController {
         return button
     }()
     
+    private let registrationButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.layer.cornerRadius = 5
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(handleRegistration), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -81,6 +93,10 @@ class RegistrationController: UIViewController {
     
     @objc func handleAddProfilePhoto() {
         print("Add photo...")
+    }
+    
+    @objc func handleRegistration() {
+        
     }
     
     @objc func handleShowLogIn() {
