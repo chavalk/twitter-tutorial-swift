@@ -21,11 +21,13 @@ class LoginController: UIViewController {
     
     private lazy var emailContainerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .red
         return view
     }()
     
     private lazy var passwordContainerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .systemPurple
         return view
     }()
     
