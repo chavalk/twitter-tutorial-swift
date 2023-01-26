@@ -34,6 +34,17 @@ class RegistrationController: UIViewController {
         return tf
     }()
     
+    private let fullNameTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Full Name")
+        return tf
+    }()
+    
+    private let usernameTextField: UITextField = {
+        let tf = Utilities().textField(withPlaceHolder: "Username")
+        tf.isSecureTextEntry = true
+        return tf
+    }()
+    
     private let alreadyHaveAccountButton: UIButton = {
         let button = Utilities().attributedButton("Already have an account?", " Log In")
         button.addTarget(self, action: #selector(handleShowLogIn), for: .touchUpInside)
