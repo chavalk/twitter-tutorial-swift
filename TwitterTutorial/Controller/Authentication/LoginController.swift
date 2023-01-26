@@ -38,6 +38,14 @@ class LoginController: UIViewController {
         let view = UIView()
         view.backgroundColor = .systemPurple
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        
+        let iv = UIImageView()
+        iv.image = UIImage(named: "ic_lock_outline_white_2x")
+        
+        view.addSubview(iv)
+        iv.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8, paddingBottom: 8)
+        iv.setDimensions(width: 24, height: 24)
+        
         return view
     }()
     
