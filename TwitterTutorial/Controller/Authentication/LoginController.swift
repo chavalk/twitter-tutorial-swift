@@ -33,11 +33,13 @@ class LoginController: UIViewController {
     
     private let emailTextField: UITextField = {
         let tf = UITextField()
+        tf.placeholder = "Email"
         return tf
     }()
     
     private let passwordTextField: UITextField = {
         let tf = UITextField()
+        tf.placeholder = "Password"
         return tf
     }()
     
