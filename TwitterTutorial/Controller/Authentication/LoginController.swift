@@ -55,8 +55,8 @@ class LoginController: UIViewController {
     }()
     
     private let dontHaveAccountButton: UIButton = {
-        let button = Utilities().attributedButton("Don't have an account?", "Sign Up")
-        button.addTarget(LoginController.self, action: #selector(handleShowSignUp), for: .touchUpInside)
+        let button = Utilities().attributedButton("Don't have an account?", " Sign Up")
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         return button
     }()
     
@@ -96,6 +96,6 @@ class LoginController: UIViewController {
         stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 32, paddingRight: 32)
         
         view.addSubview(dontHaveAccountButton)
-        dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingBottom: 16, paddingRight: 40)
+        dontHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
     }
 }
