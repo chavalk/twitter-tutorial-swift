@@ -23,22 +23,13 @@ class LoginController: UIViewController {
         let image = UIImage(named: "ic_mail_outline_white_2x-1")
         let view = Utilities().inputContainerView(withImage: image ?? UIImage())
         view.backgroundColor = .red
-        
         return view
     }()
     
     private lazy var passwordContainerView: UIView = {
-        let view = UIView()
+        let image = UIImage(named: "ic_lock_outline_white_2x")
+        let view = Utilities().inputContainerView(withImage: image ?? UIImage())
         view.backgroundColor = .systemPurple
-        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        let iv = UIImageView()
-        iv.image = UIImage(named: "ic_lock_outline_white_2x")
-        
-        view.addSubview(iv)
-        iv.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, paddingLeft: 8, paddingBottom: 8)
-        iv.setDimensions(width: 24, height: 24)
-        
         return view
     }()
     
