@@ -22,12 +22,14 @@ class LoginController: UIViewController {
     private lazy var emailContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .red
+        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
     }()
     
     private lazy var passwordContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemPurple
+        view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
     }()
     
@@ -55,6 +57,6 @@ class LoginController: UIViewController {
         stack.spacing = 8
         
         view.addSubview(stack)
-        stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 100)
+        stack.anchor(top: logoImageView.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
     }
 }
