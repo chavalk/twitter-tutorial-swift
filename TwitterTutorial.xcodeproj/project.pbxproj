@@ -14,6 +14,7 @@
 		BEA715D02981DC01001676A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715CF2981DC01001676A8 /* Extensions.swift */; };
 		BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D22981EE8F001676A8 /* LoginController.swift */; };
 		BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D42981EF9E001676A8 /* RegistrationController.swift */; };
+		BEA715D7298200DF001676A8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D6298200DF001676A8 /* Utilities.swift */; };
 		BEE599D4297F9F7800518557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D3297F9F7800518557 /* AppDelegate.swift */; };
 		BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D5297F9F7800518557 /* SceneDelegate.swift */; };
 		BEE599DD297F9F7C00518557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE599DC297F9F7C00518557 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		BEA715CF2981DC01001676A8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BEA715D22981EE8F001676A8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		BEA715D42981EF9E001676A8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		BEA715D6298200DF001676A8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BEE599D0297F9F7800518557 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE599D3297F9F7800518557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE599D5297F9F7800518557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BEA715CF2981DC01001676A8 /* Extensions.swift */,
+				BEA715D6298200DF001676A8 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				BE6B629F2980DBB500654BC2 /* NotificationsController.swift in Sources */,
 				BE6B62A12980DBFF00654BC2 /* ConversationsController.swift in Sources */,
+				BEA715D7298200DF001676A8 /* Utilities.swift in Sources */,
 				BEE599D4297F9F7800518557 /* AppDelegate.swift in Sources */,
 				BEA715D02981DC01001676A8 /* Extensions.swift in Sources */,
 				BE6B629D2980DB2B00654BC2 /* ExploreController.swift in Sources */,
