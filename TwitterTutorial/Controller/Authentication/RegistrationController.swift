@@ -118,7 +118,7 @@ class RegistrationController: UIViewController {
             
             let values = ["email": email, "username": username, "fullName": fullName]
             
-            let ref = Database.database().reference().child("users").child(uid)
+            let ref = DB_REF.child("users").child(uid)
             
             ref.updateChildValues(values) { (error, ref) in
                 print("DEBUG: Sucessfully updated user information")
