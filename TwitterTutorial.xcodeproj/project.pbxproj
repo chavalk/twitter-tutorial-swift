@@ -25,6 +25,7 @@
 		BECC35B629838C6300140465 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BECC35B529838C6300140465 /* FirebaseFirestoreSwift */; };
 		BECC35B829838C6300140465 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BECC35B729838C6300140465 /* FirebaseStorage */; };
 		BECC35BA29838C6300140465 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = BECC35B929838C6300140465 /* FirebaseStorageCombine-Community */; };
+		BECC35BC2983A6D500140465 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECC35BB2983A6D500140465 /* Constants.swift */; };
 		BEE599D4297F9F7800518557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D3297F9F7800518557 /* AppDelegate.swift */; };
 		BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE599D5297F9F7800518557 /* SceneDelegate.swift */; };
 		BEE599DD297F9F7C00518557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE599DC297F9F7C00518557 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		BEA715D42981EF9E001676A8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		BEA715D6298200DF001676A8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BECC35A62983883D00140465 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BECC35BB2983A6D500140465 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BEE599D0297F9F7800518557 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE599D3297F9F7800518557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE599D5297F9F7800518557 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				BEA715CF2981DC01001676A8 /* Extensions.swift */,
 				BEA715D6298200DF001676A8 /* Utilities.swift */,
+				BECC35BB2983A6D500140465 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */,
 				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
+				BECC35BC2983A6D500140465 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
