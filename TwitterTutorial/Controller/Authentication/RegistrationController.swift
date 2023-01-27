@@ -65,7 +65,6 @@ class RegistrationController: UIViewController {
     
     private let usernameTextField: UITextField = {
         let tf = Utilities().textField(withPlaceHolder: "Username")
-        tf.isSecureTextEntry = true
         return tf
     }()
     
@@ -115,7 +114,15 @@ class RegistrationController: UIViewController {
                 return
             }
             
-            print("DEBUG: Successfully registered user")
+            guard let uid = result?.user.uid else { return }
+            
+            let values = ["email": email, "username": username, "fullName": fullName]
+            
+            let ref = Database.database().reference().child("users").child(uid)
+            
+            ref.updateChildValues(values) { (error, ref) in
+                print("DEBUG: Sucessfully updated user information")
+            }
         }
     }
     
