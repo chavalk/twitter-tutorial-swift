@@ -108,8 +108,9 @@ class RegistrationController: UIViewController {
         guard let fullName = fullNameTextField.text else { return }
         guard let username = usernameTextField.text else { return }
         
-        AuthService.shared.registerUser()
+        let credentials = AuthCredentials(email: email, password: password, fullName: fullName, username: username, profileImage: profileImage)
         
+        AuthService.shared.registerUser(credentials: credentials)
     }
     
     @objc func handleShowLogIn() {
