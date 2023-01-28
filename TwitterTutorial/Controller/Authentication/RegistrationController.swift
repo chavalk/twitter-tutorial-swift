@@ -110,7 +110,10 @@ class RegistrationController: UIViewController {
         
         let credentials = AuthCredentials(email: email, password: password, fullName: fullName, username: username, profileImage: profileImage)
         
-        AuthService.shared.registerUser(credentials: credentials)
+        AuthService.shared.registerUser(credentials: credentials) { error, ref in
+            print("DEBUG: Sign up successful...")
+            print("DEBUG: Handle update user interface here...")
+        }
     }
     
     @objc func handleShowLogIn() {
