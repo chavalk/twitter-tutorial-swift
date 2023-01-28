@@ -28,8 +28,6 @@ class MainTabController: UITabBarController {
         
 //        logUserOut()
         authenticateUserAndConfigureUI()
-        configureViewControllers()
-        configureUI()
     }
     
     // MARK: - API
@@ -42,7 +40,8 @@ class MainTabController: UITabBarController {
                 self.present(nav, animated: true)
             }
         } else {
-            print("DEBUG: User is logged in...")
+            configureViewControllers()
+            configureUI()
         }
     }
     
