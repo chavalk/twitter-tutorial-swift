@@ -26,6 +26,7 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        logUserOut()
         authenticateUserAndConfigureUI()
         configureViewControllers()
         configureUI()
@@ -38,6 +39,14 @@ class MainTabController: UITabBarController {
             print("DEBUG: User is NOT logged in...")
         } else {
             print("DEBUG: User is logged in...")
+        }
+    }
+    
+    func logUserOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
     }
     
