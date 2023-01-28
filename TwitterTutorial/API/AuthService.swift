@@ -5,13 +5,27 @@
 //  Created by Jose Garcia on 1/27/23.
 //
 
-import Foundation
+import UIKit
+import Firebase
+
+struct AuthCredentials {
+    let email: String
+    let password: String
+    let fullName: String
+    let username: String
+    let profileImage: UIImage
+}
 
 struct AuthService {
     static let shared = AuthService()
     
-    func registerUser() {
-        guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
+    func registerUser(credentials: AuthCredentials) {
+        let email = credentials.email
+        let password = credentials.password
+        let username = credentials.username
+        let fullName = credentials.fullName
+        
+        guard let imageData = credentials.profileImage.jpegData(compressionQuality: 0.3) else { return }
         let fileName = NSUUID().uuidString
         let storageRef = STORAGE_PROFILE_IMAGES.child(fileName)
         
