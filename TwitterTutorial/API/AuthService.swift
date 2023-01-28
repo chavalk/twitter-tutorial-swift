@@ -19,7 +19,7 @@ struct AuthCredentials {
 struct AuthService {
     static let shared = AuthService()
     
-    func registerUser(credentials: AuthCredentials) {
+    func registerUser(credentials: AuthCredentials, completion: @escaping(Error?, DatabaseReference) -> Void) {
         let email = credentials.email
         let password = credentials.password
         let username = credentials.username
@@ -51,9 +51,7 @@ struct AuthService {
                     
                     let values = ["email": email, "username": username, "fullName": fullName, "profileImageUrl": profileImageUrl]
                     
-                    REF_USERS.child(uid).updateChildValues(values) { (error, ref) in
-                        print("DEBUG: Sucessfully updated user information")
-                    }
+                    REF_USERS.child(uid).updateChildValues(values, withCompletionBlock: completion)
                 }
             }
         }
