@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
 
@@ -25,8 +26,19 @@ class MainTabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        authenticateUserAndConfigureUI()
         configureViewControllers()
         configureUI()
+    }
+    
+    // MARK: - API
+    
+    func authenticateUserAndConfigureUI() {
+        if Auth.auth().currentUser == nil {
+            print("DEBUG: User is NOT logged in...")
+        } else {
+            print("DEBUG: User is logged in...")
+        }
     }
     
     // MARK: - Selectors
