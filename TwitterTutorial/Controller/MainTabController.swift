@@ -36,7 +36,11 @@ class MainTabController: UITabBarController {
     
     func authenticateUserAndConfigureUI() {
         if Auth.auth().currentUser == nil {
-            print("DEBUG: User is NOT logged in...")
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: LoginController())
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true)
+            }
         } else {
             print("DEBUG: User is logged in...")
         }
