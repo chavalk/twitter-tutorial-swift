@@ -12,6 +12,12 @@ class MainTabController: UITabBarController {
 
     // MARK: - Properties
     
+    var user: User? {
+        didSet{
+            print("DEBUG: Did set user in main tab")
+        }
+    }
+    
     let actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .white
@@ -35,7 +41,7 @@ class MainTabController: UITabBarController {
     
     func fetchUser() {
         UserService.shared.fetchUser { user in
-            print("DEBUG: Main tab user is \(user.username)")
+            self.user = user
         }
     }
     
