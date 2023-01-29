@@ -14,6 +14,8 @@
 		BE750D962984E4D500163796 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE750D952984E4D500163796 /* AuthService.swift */; };
 		BE901F5229859EC500026803 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE901F5129859EC500026803 /* UserService.swift */; };
 		BE901F542986ED7200026803 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE901F532986ED7200026803 /* User.swift */; };
+		BE901F572987138B00026803 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BE901F562987138B00026803 /* SDWebImage */; };
+		BE901F592987138B00026803 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BE901F582987138B00026803 /* SDWebImageMapKit */; };
 		BEA715D02981DC01001676A8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715CF2981DC01001676A8 /* Extensions.swift */; };
 		BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D22981EE8F001676A8 /* LoginController.swift */; };
 		BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D42981EF9E001676A8 /* RegistrationController.swift */; };
@@ -68,8 +70,10 @@
 				BECC35AE29838C6300140465 /* FirebaseDatabase in Frameworks */,
 				BECC35AA29838C6300140465 /* FirebaseAuth in Frameworks */,
 				BECC35B629838C6300140465 /* FirebaseFirestoreSwift in Frameworks */,
+				BE901F572987138B00026803 /* SDWebImage in Frameworks */,
 				BECC35B429838C6300140465 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				BECC35B829838C6300140465 /* FirebaseStorage in Frameworks */,
+				BE901F592987138B00026803 /* SDWebImageMapKit in Frameworks */,
 				BECC35B229838C6300140465 /* FirebaseFirestore in Frameworks */,
 				BECC35BA29838C6300140465 /* FirebaseStorageCombine-Community in Frameworks */,
 				BECC35AC29838C6300140465 /* FirebaseAuthCombine-Community in Frameworks */,
@@ -203,6 +207,8 @@
 				BECC35B529838C6300140465 /* FirebaseFirestoreSwift */,
 				BECC35B729838C6300140465 /* FirebaseStorage */,
 				BECC35B929838C6300140465 /* FirebaseStorageCombine-Community */,
+				BE901F562987138B00026803 /* SDWebImage */,
+				BE901F582987138B00026803 /* SDWebImageMapKit */,
 			);
 			productName = TwitterTutorial;
 			productReference = BEE599D0297F9F7800518557 /* TwitterTutorial.app */;
@@ -234,6 +240,7 @@
 			mainGroup = BEE599C7297F9F7800518557;
 			packageReferences = (
 				BECC35A829838C6300140465 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BE901F552987138B00026803 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = BEE599D1297F9F7800518557 /* Products */;
 			projectDirPath = "";
@@ -486,6 +493,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BE901F552987138B00026803 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		BECC35A829838C6300140465 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -497,6 +512,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BE901F562987138B00026803 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE901F552987138B00026803 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		BE901F582987138B00026803 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE901F552987138B00026803 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		BECC35A929838C6300140465 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BECC35A829838C6300140465 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
