@@ -11,6 +11,8 @@ class UploadTweetController: UIViewController {
     
     // MARK: - Properties
     
+    private let user: User
+    
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = .twitterBlue
@@ -38,6 +40,15 @@ class UploadTweetController: UIViewController {
     }()
     
     // MARK: - Lifecycle
+    
+    init(user: User) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
