@@ -33,6 +33,7 @@ class UploadTweetController: UIViewController {
         iv.clipsToBounds = true
         iv.setDimensions(width: 48, height: 48)
         iv.layer.cornerRadius = 48 / 2
+        iv.backgroundColor = .twitterBlue
         return iv
     }()
     
@@ -60,6 +61,9 @@ class UploadTweetController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         configureNavigationBar()
+        
+        view.addSubview(profileImageView)
+        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
     }
     
     func configureNavigationBar() {
