@@ -53,6 +53,8 @@ class UploadTweetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        print("DEBUG: User is \(user.username)")
     }
     
     // MARK: - Selectors
