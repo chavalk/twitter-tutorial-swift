@@ -53,8 +53,6 @@ class UploadTweetController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        
-        print("DEBUG: User is \(user.username)")
     }
     
     // MARK: - Selectors
@@ -77,6 +75,8 @@ class UploadTweetController: UIViewController {
         
         view.addSubview(profileImageView)
         profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, paddingTop: 16, paddingLeft: 16)
+        
+        profileImageView.sd_setImage(with: user.profileImageUrl)
     }
     
     func configureNavigationBar() {
