@@ -30,6 +30,42 @@ class TweetCell: UICollectionViewCell {
         return label
     }()
     
+    private lazy var commentButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "comment"), for: .normal)
+        button.tintColor = .darkGray
+        button.setDimensions(width: 20, height: 20)
+        button.addTarget(self, action: #selector(handleCommentTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var retweetButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "retweet"), for: .normal)
+        button.tintColor = .darkGray
+        button.setDimensions(width: 20, height: 20)
+        button.addTarget(self, action: #selector(handleRetweetTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var likeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "like"), for: .normal)
+        button.tintColor = .darkGray
+        button.setDimensions(width: 20, height: 20)
+        button.addTarget(self, action: #selector(handleLikeTapped), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var shareButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "share"), for: .normal)
+        button.tintColor = .darkGray
+        button.setDimensions(width: 20, height: 20)
+        button.addTarget(self, action: #selector(handleShareTapped), for: .touchUpInside)
+        return button
+    }()
+    
     private let infoLabel = UILabel()
     
     // MARK: - Lifecycle
@@ -65,6 +101,22 @@ class TweetCell: UICollectionViewCell {
     }
     
     // MARK: - Selectors
+    
+    @objc func handleCommentTapped() {
+        
+    }
+    
+    @objc func handleRetweetTapped() {
+        
+    }
+    
+    @objc func handleLikeTapped() {
+        
+    }
+    
+    @objc func handleShareTapped() {
+        
+    }
     
     // MARK: - Helpers
     
