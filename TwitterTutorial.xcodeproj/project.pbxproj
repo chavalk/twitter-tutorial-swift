@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE446EDD298A11B900276981 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDC298A11B900276981 /* CaptionTextView.swift */; };
+		BE446EDF298A205400276981 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDE298A205400276981 /* TweetService.swift */; };
 		BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B629A2980DAAE00654BC2 /* FeedController.swift */; };
 		BE6B629D2980DB2B00654BC2 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B629C2980DB2B00654BC2 /* ExploreController.swift */; };
 		BE6B629F2980DBB500654BC2 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B629E2980DBB500654BC2 /* NotificationsController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		BE446EDC298A11B900276981 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
+		BE446EDE298A205400276981 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		BE6B629A2980DAAE00654BC2 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		BE6B629C2980DB2B00654BC2 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		BE6B629E2980DBB500654BC2 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				BE750D952984E4D500163796 /* AuthService.swift */,
 				BE901F5129859EC500026803 /* UserService.swift */,
+				BE446EDE298A205400276981 /* TweetService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
 				BECC35BC2983A6D500140465 /* Constants.swift in Sources */,
+				BE446EDF298A205400276981 /* TweetService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
