@@ -101,7 +101,7 @@ class TweetCell: UICollectionViewCell {
         let underlineView = UIView()
         underlineView.backgroundColor = .systemGroupedBackground
         addSubview(underlineView)
-        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
+        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 0.17)
     }
     
     required init?(coder: NSCoder) {
