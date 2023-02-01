@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class FeedController: UIViewController {
+class FeedController: UICollectionViewController {
     
     // MARK: - Properties
     
