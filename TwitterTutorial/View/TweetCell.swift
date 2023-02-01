@@ -47,6 +47,11 @@ class TweetCell: UICollectionViewCell {
         stack.spacing = 4
         
         infoLabel.text = "Heath Ledger @Joker"
+        
+        let underlineView = UIView()
+        underlineView.backgroundColor = .systemGroupedBackground
+        addSubview(underlineView)
+        underlineView.anchor(left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, height: 1)
     }
     
     required init?(coder: NSCoder) {
