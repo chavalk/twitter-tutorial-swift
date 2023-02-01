@@ -8,6 +8,8 @@
 import UIKit
 import SDWebImage
 
+private let reuseIdentifier = "TweetCell"
+
 class FeedController: UICollectionViewController {
     
     // MARK: - Properties
@@ -56,5 +58,16 @@ class FeedController: UICollectionViewController {
         profileImageView.sd_setImage(with: user.profileImageUrl)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
+    }
+}
+
+extension FeedController {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        return cell
     }
 }
