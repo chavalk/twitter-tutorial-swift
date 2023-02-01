@@ -25,6 +25,7 @@ class TweetCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 0
+        label.textColor = .black
         label.text = "Some test caption"
         return label
     }()
@@ -46,7 +47,11 @@ class TweetCell: UICollectionViewCell {
         stack.distribution = .fillProportionally
         stack.spacing = 4
         
+        addSubview(stack)
+        stack.anchor(top: profileImageView.topAnchor, left: profileImageView.rightAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12)
+        
         infoLabel.text = "Heath Ledger @Joker"
+        infoLabel.textColor = .black
         
         let underlineView = UIView()
         underlineView.backgroundColor = .systemGroupedBackground
