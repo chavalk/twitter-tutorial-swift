@@ -25,6 +25,7 @@ class TweetCell: UICollectionViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 0
+        label.text = "Some test caption"
         return label
     }()
     
@@ -39,6 +40,13 @@ class TweetCell: UICollectionViewCell {
         
         addSubview(profileImageView)
         profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 8)
+        
+        let stack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
+        stack.axis = .vertical
+        stack.distribution = .fillProportionally
+        stack.spacing = 4
+        
+        infoLabel.text = "Heath Ledger @Joker"
     }
     
     required init?(coder: NSCoder) {
