@@ -90,6 +90,14 @@ class TweetCell: UICollectionViewCell {
         infoLabel.textColor = .black
         infoLabel.text = "Heath Ledger @Joker"
         
+        let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton, likeButton, shareButton])
+        actionStack.axis = .horizontal
+        actionStack.spacing = 72
+        
+        addSubview(actionStack)
+        actionStack.centerX(inView: self)
+        actionStack.anchor(bottom: bottomAnchor, paddingBottom: 8)
+        
         let underlineView = UIView()
         underlineView.backgroundColor = .systemGroupedBackground
         addSubview(underlineView)
