@@ -11,6 +11,10 @@ struct TweetViewModel {
     
     let tweet: Tweet
     
+    var profileImageUrl: URL? {
+        return tweet.user.profileImageUrl
+    }
+    
     init(tweet: Tweet) {
         self.tweet = tweet
     }
