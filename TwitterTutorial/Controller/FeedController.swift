@@ -30,7 +30,7 @@ class FeedController: UIViewController {
     
     func fetchTweets() {
         TweetService.shared.fetchTweets { tweets in
-            
+            print("DEBUG: Tweets are \(tweets)")
         }
     }
     
