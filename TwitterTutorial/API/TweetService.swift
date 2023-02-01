@@ -22,7 +22,11 @@ struct TweetService {
         var tweets = [Tweet]()
         
         REF_TWEETS.observe(.childAdded) { snapshot in
-            print("DEBUG: Snapshot is \(snapshot.value)")
+            guard let dictionary = snapshot.value as? [String: Any] else { return }
+            let tweetID = snapshot.key
+            let tweet = Tweet(tweetID: tweetID, dictionary: dictionary)
+            tweets.append(tweet)
+            completion(tweets)
         }
     }
 }
