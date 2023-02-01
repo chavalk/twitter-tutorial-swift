@@ -133,6 +133,8 @@ class TweetCell: UICollectionViewCell {
     // MARK: - Helpers
     
     func configure() {
+        guard let tweet = tweet else { return }
         
+        captionLabel.text = tweet.caption
     }
 }
