@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol TweetCellDelegate: class {
+    func handleProfileImageTapped()
+}
+
 class TweetCell: UICollectionViewCell {
     
     // MARK: - Properties
@@ -14,6 +18,8 @@ class TweetCell: UICollectionViewCell {
     var tweet: Tweet? {
         didSet { configure() }
     }
+    
+    weak var delegate: TweetCellDelegate?
     
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -120,7 +126,7 @@ class TweetCell: UICollectionViewCell {
     // MARK: - Selectors
     
     @objc func handleProfileImageTapped() {
-        print("DEBUG: Go to user profile...")
+        delegate?.handleProfileImageTapped()
     }
     
     @objc func handleCommentTapped() {
