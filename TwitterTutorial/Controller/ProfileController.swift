@@ -15,7 +15,12 @@ class ProfileController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView.backgroundColor = .red
+        configureCollectionView()
+    }
+    
+    // MARK: Helpers
+    
+    func configureCollectionView() {
+        collectionView.backgroundColor = .white
     }
 }
