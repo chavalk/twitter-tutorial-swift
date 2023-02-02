@@ -20,6 +20,11 @@ class ProfileController: UICollectionViewController {
         configureCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     // MARK: Helpers
     
     func configureCollectionView() {
