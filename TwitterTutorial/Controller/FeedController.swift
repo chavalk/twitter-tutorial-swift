@@ -91,3 +91,11 @@ extension FeedController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: view.frame.width, height: 120)
     }
 }
+
+extension FeedController: TweetCellDelegate {
+    func handleProfileImageTapped() {
+        print("DEBUG: Handle profile image tapped in controller...")
+    }
+    
+    
+}
