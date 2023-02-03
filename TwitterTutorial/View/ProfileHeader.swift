@@ -29,6 +29,16 @@ class ProfileHeader: UICollectionReusableView {
         return button
     }()
     
+    private let profileImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.backgroundColor = .lightGray
+        iv.layer.borderColor = UIColor.white.cgColor
+        iv.layer.borderWidth = 4
+        return iv
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -36,6 +46,11 @@ class ProfileHeader: UICollectionReusableView {
         
         addSubview(containerView)
         containerView.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, height: 108)
+        
+        addSubview(profileImageView)
+        profileImageView.anchor(top: containerView.bottomAnchor, left: leftAnchor, paddingTop: -24, paddingLeft: 8)
+        profileImageView.setDimensions(width: 80, height: 80)
+        profileImageView.layer.cornerRadius = 80 / 2
     }
     
     required init?(coder: NSCoder) {
