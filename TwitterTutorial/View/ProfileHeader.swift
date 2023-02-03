@@ -39,6 +39,17 @@ class ProfileHeader: UICollectionReusableView {
         return iv
     }()
     
+    private lazy var editProfileFollowButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Loading", for: .normal)
+        button.layer.borderColor = UIColor.twitterBlue.cgColor
+        button.layer.borderWidth = 1.25
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.addTarget(self, action: #selector(handleEditProfileFollow), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -51,6 +62,11 @@ class ProfileHeader: UICollectionReusableView {
         profileImageView.anchor(top: containerView.bottomAnchor, left: leftAnchor, paddingTop: -24, paddingLeft: 8)
         profileImageView.setDimensions(width: 80, height: 80)
         profileImageView.layer.cornerRadius = 80 / 2
+        
+        addSubview(editProfileFollowButton)
+        editProfileFollowButton.anchor(top: containerView.bottomAnchor, right: rightAnchor, paddingTop: 12, paddingRight: 12)
+        editProfileFollowButton.setDimensions(width: 100, height: 36)
+        editProfileFollowButton.layer.cornerRadius = 36 / 2
     }
     
     required init?(coder: NSCoder) {
@@ -60,6 +76,10 @@ class ProfileHeader: UICollectionReusableView {
     // MARK: - Selectors
     
     @objc func handleDismissal() {
+        
+    }
+    
+    @objc func handleEditProfileFollow() {
         
     }
 }
