@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE295512298D99CD00BE8BF0 /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */; };
 		BE446EDD298A11B900276981 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDC298A11B900276981 /* CaptionTextView.swift */; };
 		BE446EDF298A205400276981 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDE298A205400276981 /* TweetService.swift */; };
 		BE446EE1298A2A4700276981 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EE0298A2A4700276981 /* Tweet.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
 		BE446EDC298A11B900276981 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		BE446EDE298A205400276981 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
 		BE446EE0298A2A4700276981 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				BE446EDC298A11B900276981 /* CaptionTextView.swift */,
 				BE714A90298AFF18004C4185 /* TweetCell.swift */,
 				BE714A96298B7070004C4185 /* ProfileHeader.swift */,
+				BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				BE714A93298B3152004C4185 /* TweetViewModel.swift in Sources */,
 				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
+				BE295512298D99CD00BE8BF0 /* ProfileFilterView.swift in Sources */,
 				BECC35BC2983A6D500140465 /* Constants.swift in Sources */,
 				BE446EE1298A2A4700276981 /* Tweet.swift in Sources */,
 				BE446EDF298A205400276981 /* TweetService.swift in Sources */,
