@@ -29,7 +29,7 @@ class ProfileFilterView: UIView {
         
         collectionView.register(ProfileFilterCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        backgroundColor = .red
+        backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
@@ -45,6 +45,12 @@ extension ProfileFilterView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProfileFilterCell
         return cell
+    }
+}
+
+extension ProfileFilterView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: frame.width / 3, height: frame.height)
     }
 }
 
