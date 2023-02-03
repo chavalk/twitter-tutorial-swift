@@ -50,6 +50,29 @@ class ProfileHeader: UICollectionReusableView {
         return button
     }()
     
+    private let fullNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.text = "Eddie Brock"
+        return label
+    }()
+    
+    private let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .lightGray
+        label.text = "@venom"
+        return label
+    }()
+    
+    private let bioLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.numberOfLines = 3
+        label.text = "This is a user bio that will span more than one line for test purposes"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -67,6 +90,14 @@ class ProfileHeader: UICollectionReusableView {
         editProfileFollowButton.anchor(top: containerView.bottomAnchor, right: rightAnchor, paddingTop: 12, paddingRight: 12)
         editProfileFollowButton.setDimensions(width: 100, height: 36)
         editProfileFollowButton.layer.cornerRadius = 36 / 2
+        
+        let userDetailsStack = UIStackView(arrangedSubviews: [fullNameLabel, usernameLabel, bioLabel])
+        userDetailsStack.axis = .vertical
+        userDetailsStack.distribution = .fillProportionally
+        userDetailsStack.spacing = 4
+        
+        addSubview(userDetailsStack)
+        userDetailsStack.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
     }
     
     required init?(coder: NSCoder) {
