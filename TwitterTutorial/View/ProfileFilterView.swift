@@ -29,7 +29,8 @@ class ProfileFilterView: UIView {
         
         collectionView.register(ProfileFilterCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
-        backgroundColor = .white
+        addSubview(collectionView)
+        collectionView.addConstraintsToFillView(self)
     }
     
     required init?(coder: NSCoder) {
