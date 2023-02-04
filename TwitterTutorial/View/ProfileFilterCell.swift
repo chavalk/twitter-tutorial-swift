@@ -11,6 +11,13 @@ class ProfileFilterCell: UICollectionViewCell {
     
     // MARK: - Properties
     
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
