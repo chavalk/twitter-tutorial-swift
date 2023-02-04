@@ -38,6 +38,8 @@ class ProfileFilterView: UIView {
     }
 }
 
+// MARK: - UICollectionViewDataSource
+
 extension ProfileFilterView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -49,12 +51,16 @@ extension ProfileFilterView: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
+extension ProfileFilterView: UICollectionViewDelegate {
+    
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+
 extension ProfileFilterView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.width / 3, height: frame.height)
     }
-}
-
-extension ProfileFilterView: UICollectionViewDelegate {
-    
 }
