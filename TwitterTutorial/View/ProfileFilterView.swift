@@ -60,7 +60,9 @@ extension ProfileFilterView: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension ProfileFilterView: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.filterView(self, didSelect: indexPath)
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
