@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProfileFilterOption: Int, CaseIterable {
+enum ProfileFilterOptions: Int, CaseIterable {
     case tweets
     case replies
     case likes
