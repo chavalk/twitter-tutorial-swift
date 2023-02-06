@@ -55,7 +55,7 @@ extension ProfileFilterView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ProfileFilterCell
         
         let option = ProfileFilterOptions(rawValue: indexPath.row)
-        print("DEBUG: Option is \(option?.description)")
+        cell.option = option
         
         return cell
     }
