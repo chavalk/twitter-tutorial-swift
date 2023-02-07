@@ -187,6 +187,7 @@ class ProfileHeader: UICollectionReusableView {
         followersLabel.attributedText = viewModel.followersString
         
         fullNameLabel.text = user.fullName
+        usernameLabel.text = viewModel.usernameText
     }
 }
 
