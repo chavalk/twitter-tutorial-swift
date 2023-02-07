@@ -44,6 +44,13 @@ class UserCell: UITableViewCell {
         
         addSubview(profileImageView)
         profileImageView.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
+        
+        let stack = UIStackView(arrangedSubviews: [usernameLabel, fullNameLabel])
+        stack.axis = .vertical
+        stack.spacing = 2
+        
+        addSubview(stack)
+        stack.centerY(inView: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 12)
     }
     
     required init?(coder: NSCoder) {
