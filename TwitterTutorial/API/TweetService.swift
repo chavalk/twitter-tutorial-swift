@@ -42,7 +42,11 @@ struct TweetService {
     
     func fetchTweets(forUser user: User, completion: @escaping([Tweet]) -> Void) {
         REF_USER_TWEETS.child(user.uid).observe(.childAdded) { snapshot in
-            print(snapshot)
+            let tweetID = snapshot.key
+            
+            REF_TWEETS.child(tweetID).observeSingleEvent(of: .value) { snapshot in
+                print(snapshot)
+            }
         }
     }
 }
