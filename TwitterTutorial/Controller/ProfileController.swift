@@ -30,6 +30,7 @@ class ProfileController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchTweets()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +42,9 @@ class ProfileController: UICollectionViewController {
     // MARK: - API
     
     func fetchTweets() {
-        TweetService.shared.fetchTweets(forUser: <#T##User#>, completion: <#T##([Tweet]) -> Void#>)
+        TweetService.shared.fetchTweets(forUser: user) { tweets in
+            print("DEBUG: API call completed...")
+        }
     }
     
     // MARK: Helpers
