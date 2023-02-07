@@ -15,8 +15,8 @@ class UserCell: UITableViewCell {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.clipsToBounds = true
-        iv.setDimensions(width: 32, height: 32)
-        iv.layer.cornerRadius = 32 / 2
+        iv.setDimensions(width: 40, height: 40)
+        iv.layer.cornerRadius = 40 / 2
         iv.backgroundColor = .twitterBlue
         return iv
     }()
