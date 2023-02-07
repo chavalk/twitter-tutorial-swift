@@ -21,6 +21,22 @@ class UserCell: UITableViewCell {
         return iv
     }()
     
+    private let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.textColor = .black
+        label.text = "Username"
+        return label
+    }()
+    
+    private let fullNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .black
+        label.text = "Full Name"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
