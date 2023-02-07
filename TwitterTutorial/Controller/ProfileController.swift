@@ -16,6 +16,10 @@ class ProfileController: UICollectionViewController {
     
     private let user: User
     
+    private var tweets = [Tweet]() {
+        didSet { collectionView.reloadData() }
+    }
+    
     // MARK: - Lifecycle
     
     init(user: User) {
@@ -43,7 +47,7 @@ class ProfileController: UICollectionViewController {
     
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUser: user) { tweets in
-            print("Tweets are \(tweets)")
+            self.tweets = tweets
         }
     }
     
