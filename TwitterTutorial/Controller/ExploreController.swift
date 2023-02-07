@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExploreController: UIViewController {
+class ExploreController: UITableViewController {
     
     // MARK: - Properties
     
@@ -24,5 +24,15 @@ class ExploreController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         navigationItem.title = "Explore"
+    }
+}
+
+extension ExploreController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
 }
