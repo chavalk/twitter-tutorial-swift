@@ -38,6 +38,12 @@ class ProfileController: UICollectionViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
+    // MARK: - API
+    
+    func fetchTweets() {
+        TweetService.shared.fetchTweets(forUser: <#T##User#>, completion: <#T##([Tweet]) -> Void#>)
+    }
+    
     // MARK: Helpers
     
     func configureCollectionView() {
