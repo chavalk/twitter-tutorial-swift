@@ -41,9 +41,7 @@ struct TweetService {
     }
     
     func fetchTweets(forUser user: User, completion: @escaping([Tweet]) -> Void) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        
-        REF_USER_TWEETS.child(uid).observe(.childAdded) { snapshot in
+        REF_USER_TWEETS.child(user.uid).observe(.childAdded) { snapshot in
             print(snapshot)
         }
     }
