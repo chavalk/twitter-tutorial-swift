@@ -43,7 +43,7 @@ class ProfileController: UICollectionViewController {
     
     func fetchTweets() {
         TweetService.shared.fetchTweets(forUser: user) { tweets in
-            print("DEBUG: API call completed...")
+            print("Tweets are \(tweets)")
         }
     }
     
