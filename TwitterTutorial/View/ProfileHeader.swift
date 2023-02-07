@@ -11,6 +11,10 @@ class ProfileHeader: UICollectionReusableView {
     
     // MARK: - Properties
     
+    var user: User? {
+        didSet { configure() }
+    }
+    
     private let filterBar = ProfileFilterView()
     
     private lazy var containerView: UIView = {
@@ -168,6 +172,17 @@ class ProfileHeader: UICollectionReusableView {
     
     @objc func handleFollowingTapped() {
         
+    }
+    
+    // MARK: - Helpers
+    
+    func configure() {
+        guard let user = user else { return }
+        
+        let viewModel = ProfileHeaderViewModel(user: user)
+        
+        followingLabel.attributedText = viewModel.followingString
+        followersLabel.attributedText = viewModel.followersString
     }
 }
 
