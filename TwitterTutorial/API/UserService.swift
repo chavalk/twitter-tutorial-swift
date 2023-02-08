@@ -29,4 +29,8 @@ struct UserService {
             completion(users)
         }
     }
+    
+    func followUser(uid: String, completion: @escaping(Database, Error?) -> Void) {
+        
+    }
 }
