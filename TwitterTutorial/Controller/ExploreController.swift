@@ -73,14 +73,15 @@ extension ExploreController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UserCell
         let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
-        cell.user = users[indexPath.row]
+        cell.user = user
         return cell
     }
 }
 
 extension ExploreController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else { return }
-        tableView.reloadData()
+        guard let searchText = searchController.searchBar.text?.lowercased() else { return }
+        
+        filteredUsers = users.filter({ $0.username.contains(searchText) })
     }
 }
