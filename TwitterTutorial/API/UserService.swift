@@ -18,4 +18,10 @@ struct UserService {
             completion(user)
         }
     }
+    
+    func fetchUsers(completion: @escaping([User]) -> Void) {
+        REF_USERS.observe(.childAdded) { snapshot in
+            print(snapshot)
+        }
+    }
 }
