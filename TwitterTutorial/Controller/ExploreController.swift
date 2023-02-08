@@ -17,8 +17,16 @@ class ExploreController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
+        fetchUsers()
+    }
+    
+    // MARK: - API
+    
+    func fetchUsers() {
+        UserService.shared.fetchUsers { users in
+            
+        }
     }
     
     // MARK: - Helpers
