@@ -37,4 +37,8 @@ struct UserService {
             REF_USER_FOLLOWERS.child(uid).updateChildValues([currentUid: 1], withCompletionBlock: completion)
         }
     }
+    
+    func unfollowUser(uid: String, completion: @escaping(Error?, DatabaseReference) -> Void) {
+        
+    }
 }
