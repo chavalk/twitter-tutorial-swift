@@ -17,6 +17,8 @@ class ExploreController: UITableViewController {
         didSet { tableView.reloadData() }
     }
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
