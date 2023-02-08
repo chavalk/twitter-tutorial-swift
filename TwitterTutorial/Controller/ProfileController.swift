@@ -55,6 +55,7 @@ class ProfileController: UICollectionViewController {
     func checkIfUserIsFollowed() {
         UserService.shared.checkIfUserIsFollowed(uid: user.uid) { isFollowed in
             self.user.isFollowed = isFollowed
+            self.collectionView.reloadData()
         }
     }
     
