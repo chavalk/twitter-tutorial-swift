@@ -25,6 +25,7 @@ class ExploreController: UITableViewController {
         super.viewDidLoad()
         configureUI()
         fetchUsers()
+        configureSearchController()
     }
     
     // MARK: - API
@@ -45,6 +46,15 @@ class ExploreController: UITableViewController {
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
     }
+    
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search for a user"
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
+    }
 }
 
 extension ExploreController {
@@ -56,5 +66,11 @@ extension ExploreController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! UserCell
         cell.user = users[indexPath.row]
         return cell
+    }
+}
+
+extension ExploreController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else { return }
     }
 }
