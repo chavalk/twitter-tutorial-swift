@@ -65,6 +65,8 @@ class ExploreController: UITableViewController {
     }
 }
 
+// MARK: - UITableViewDelegate/DataSource
+
 extension ExploreController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inSearchMode ? filteredUsers.count : users.count
@@ -75,6 +77,12 @@ extension ExploreController {
         let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
         cell.user = user
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
