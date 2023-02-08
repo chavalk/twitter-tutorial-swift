@@ -92,6 +92,8 @@ extension ExploreController {
     }
 }
 
+// MARK: - UISearchResultsUpdating
+
 extension ExploreController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text?.lowercased() else { return }
