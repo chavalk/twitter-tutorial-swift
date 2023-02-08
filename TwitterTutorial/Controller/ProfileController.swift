@@ -104,17 +104,15 @@ extension ProfileController: UICollectionViewDelegateFlowLayout {
 extension ProfileController : ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
-        print("DEBUG: User is followed is \(user.isFollowed) before button tap")
-        
         if user.isFollowed {
             UserService.shared.unfollowUser(uid: user.uid) { err, ref in
                 self.user.isFollowed = false
-                print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+                header.editProfileFollowButton.setTitle("Follow", for: .normal)
             }
         } else {
             UserService.shared.followUser(uid: user.uid) { ref, error in
                 self.user.isFollowed = true
-                print("DEBUG: User is followed is \(self.user.isFollowed) after button tap")
+                header.editProfileFollowButton.setTitle("Following", for: .normal)
             }
         }
     }
