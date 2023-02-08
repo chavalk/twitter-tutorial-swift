@@ -86,7 +86,7 @@ extension ExploreController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = users[indexPath.row]
+        let user = inSearchMode ? filteredUsers[indexPath.row] : users[indexPath.row]
         let controller = ProfileController(user: user)
         navigationController?.pushViewController(controller, animated: true)
     }
