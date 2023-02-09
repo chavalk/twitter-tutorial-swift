@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE12EF602994848D00B37938 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12EF5F2994848D00B37938 /* TweetController.swift */; };
+		BE12EF622994A0D500B37938 /* TweetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12EF612994A0D500B37938 /* TweetHeader.swift */; };
 		BE295512298D99CD00BE8BF0 /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */; };
 		BE295514298DD31A00BE8BF0 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */; };
 		BE446EDD298A11B900276981 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDC298A11B900276981 /* CaptionTextView.swift */; };
@@ -53,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		BE12EF5F2994848D00B37938 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
+		BE12EF612994A0D500B37938 /* TweetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetHeader.swift; sourceTree = "<group>"; };
 		BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
 		BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		BE446EDC298A11B900276981 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */,
 				BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */,
 				BE8CAB2D2993104A00F3DA70 /* UserCell.swift */,
+				BE12EF612994A0D500B37938 /* TweetHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */,
 				BEE599F4297FA47B00518557 /* MainTabController.swift in Sources */,
 				BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */,
+				BE12EF622994A0D500B37938 /* TweetHeader.swift in Sources */,
 				BE714A93298B3152004C4185 /* TweetViewModel.swift in Sources */,
 				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
