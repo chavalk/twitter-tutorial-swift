@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE12EF602994848D00B37938 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12EF5F2994848D00B37938 /* TweetController.swift */; };
 		BE295512298D99CD00BE8BF0 /* ProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */; };
 		BE295514298DD31A00BE8BF0 /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */; };
 		BE446EDD298A11B900276981 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE446EDC298A11B900276981 /* CaptionTextView.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE12EF5F2994848D00B37938 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
 		BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterView.swift; sourceTree = "<group>"; };
 		BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		BE446EDC298A11B900276981 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				BE6B62A02980DBFF00654BC2 /* ConversationsController.swift */,
 				BE7AAF6F2988BC55000DEDC0 /* UploadTweetController.swift */,
 				BE714A94298B5618004C4185 /* ProfileController.swift */,
+				BE12EF5F2994848D00B37938 /* TweetController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				BEA715D7298200DF001676A8 /* Utilities.swift in Sources */,
 				BEE599D4297F9F7800518557 /* AppDelegate.swift in Sources */,
 				BEA715D02981DC01001676A8 /* Extensions.swift in Sources */,
+				BE12EF602994848D00B37938 /* TweetController.swift in Sources */,
 				BE714A95298B5618004C4185 /* ProfileController.swift in Sources */,
 				BE714A97298B7070004C4185 /* ProfileHeader.swift in Sources */,
 				BE714A91298AFF18004C4185 /* TweetCell.swift in Sources */,
