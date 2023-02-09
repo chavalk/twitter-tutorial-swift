@@ -48,7 +48,7 @@ class TweetHeader: UICollectionReusableView {
         
         let labelStack = UIStackView(arrangedSubviews: [fullNameLabel, usernameLabel])
         labelStack.axis = .vertical
-        labelStack.spacing = 4
+        labelStack.spacing = -6
         
         let stack = UIStackView(arrangedSubviews: [profileImageView, labelStack])
         stack.spacing = 12
