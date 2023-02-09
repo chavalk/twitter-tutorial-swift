@@ -50,6 +50,15 @@ class TweetHeader: UICollectionReusableView {
         return label
     }()
     
+    private let dateLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .lightGray
+        label.textAlignment = .left
+        label.text = "6:33 PM - 1/29/2020"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -67,6 +76,9 @@ class TweetHeader: UICollectionReusableView {
         
         addSubview(captionLabel)
         captionLabel.anchor(top: stack.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16)
+        
+        addSubview(dateLabel)
+        dateLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 20, paddingLeft: 16)
     }
     
     required init?(coder: NSCoder) {
