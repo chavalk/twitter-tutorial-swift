@@ -28,14 +28,16 @@ class TweetHeader: UICollectionReusableView {
     
     private let fullNameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.text = "Peter Parker"
         return label
     }()
     
     private let usernameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
+        label.text = "spiderman"
         return label
     }()
     
