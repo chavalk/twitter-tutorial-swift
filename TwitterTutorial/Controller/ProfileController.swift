@@ -61,8 +61,9 @@ class ProfileController: UICollectionViewController {
     }
     
     func fetchUserStats() {
-        UserService.shared.fetchUserStats(uid: user.uid) {
-            
+        UserService.shared.fetchUserStats(uid: user.uid) { stats in
+            self.user.stats = stats
+            self.collectionView.reloadData()
         }
     }
     
