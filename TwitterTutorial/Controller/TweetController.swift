@@ -7,6 +7,9 @@
 
 import UIKit
 
+private let reuseIdentifier = "TweetCell"
+private let headerIdentifier = "TweetHeader"
+
 class TweetController: UICollectionViewController {
     
     // MARK: - Properties
@@ -33,5 +36,8 @@ class TweetController: UICollectionViewController {
     
     func configureCollectionView() {
         collectionView.backgroundColor = .white
+        
+        collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(TweetHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier)
     }
 }
