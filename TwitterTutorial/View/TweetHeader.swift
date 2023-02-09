@@ -44,7 +44,15 @@ class TweetHeader: UICollectionReusableView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .systemPurple
+        let labelStack = UIStackView(arrangedSubviews: [fullNameLabel, usernameLabel])
+        labelStack.axis = .vertical
+        labelStack.spacing = 4
+        
+        let stack = UIStackView(arrangedSubviews: [profileImageView, labelStack])
+        stack.spacing = 12
+        
+        addSubview(stack)
+        stack.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16)
     }
     
     required init?(coder: NSCoder) {
