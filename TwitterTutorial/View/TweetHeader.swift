@@ -88,6 +88,14 @@ class TweetHeader: UICollectionReusableView {
         view.addSubview(divider1)
         divider1.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 8, height: 1.0)
         
+        let stack = UIStackView(arrangedSubviews: [retweetsLabel, likesLabel])
+        stack.axis = .horizontal
+        stack.spacing = 12
+        
+        view.addSubview(stack)
+        stack.centerY(inView: view)
+        stack.anchor(left: view.leftAnchor, paddingLeft: 16)
+        
         return view
     }()
     
