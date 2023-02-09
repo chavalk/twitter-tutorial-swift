@@ -96,6 +96,11 @@ class TweetHeader: UICollectionReusableView {
         stack.centerY(inView: view)
         stack.anchor(left: view.leftAnchor, paddingLeft: 16)
         
+        let divider2 = UIView()
+        divider2.backgroundColor = .systemGroupedBackground
+        view.addSubview(divider2)
+        divider2.anchor(left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingLeft: 8, height: 1.0)
+        
         return view
     }()
     
