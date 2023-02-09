@@ -27,6 +27,8 @@ class TweetController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        
+        print("DEBUG: Tweet caption is \(tweet.caption)")
     }
     
     func configureCollectionView() {
