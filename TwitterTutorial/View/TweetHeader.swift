@@ -59,6 +59,14 @@ class TweetHeader: UICollectionReusableView {
         return label
     }()
     
+    private lazy var optionsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .lightGray
+        button.setImage(UIImage(named: "down_arrow_24pt"), for: .normal)
+        button.addTarget(self, action: #selector(showActionSheet), for: .touchUpInside)
+        return button
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -79,6 +87,10 @@ class TweetHeader: UICollectionReusableView {
         
         addSubview(dateLabel)
         dateLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 20, paddingLeft: 16)
+        
+        addSubview(optionsButton)
+        optionsButton.centerY(inView: stack)
+        optionsButton.anchor(right: rightAnchor, paddingRight: 8)
     }
     
     required init?(coder: NSCoder) {
@@ -88,6 +100,10 @@ class TweetHeader: UICollectionReusableView {
     // MARK: - Selectors
     
     @objc func handleProfileImageTapped() {
+        
+    }
+    
+    @objc func showActionSheet() {
         
     }
 }
