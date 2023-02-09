@@ -128,6 +128,9 @@ class TweetHeader: UICollectionReusableView {
         addSubview(optionsButton)
         optionsButton.centerY(inView: stack)
         optionsButton.anchor(right: rightAnchor, paddingRight: 8)
+        
+        addSubview(statsView)
+        statsView.anchor(top: dateLabel.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 20, height: 40)
     }
     
     required init?(coder: NSCoder) {
