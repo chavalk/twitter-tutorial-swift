@@ -83,7 +83,6 @@ class TweetHeader: UICollectionReusableView {
     
     private lazy var statsView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
         
         let divider1 = UIView()
         divider1.backgroundColor = .systemGroupedBackground
