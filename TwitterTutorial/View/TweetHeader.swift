@@ -26,6 +26,19 @@ class TweetHeader: UICollectionReusableView {
         return iv
     }()
     
+    private let fullNameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
+    
+    private let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .lightGray
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
