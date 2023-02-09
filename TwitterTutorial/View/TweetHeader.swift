@@ -67,6 +67,18 @@ class TweetHeader: UICollectionReusableView {
         return button
     }()
     
+    private lazy var statsView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .red
+        
+        let divider1 = UIView()
+        divider1.backgroundColor = .systemGroupedBackground
+        view.addSubview(divider1)
+        divider1.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingLeft: 8, height: 1.0)
+        
+        return view
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
