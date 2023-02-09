@@ -100,10 +100,10 @@ class TweetHeader: UICollectionReusableView {
     // MARK: - Selectors
     
     @objc func handleProfileImageTapped() {
-        
+        print("DEBUG: Go to user profile...")
     }
     
     @objc func showActionSheet() {
-        
+        print("DEBUG: Handle show action sheer...")
     }
 }
