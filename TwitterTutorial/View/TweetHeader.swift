@@ -41,6 +41,15 @@ class TweetHeader: UICollectionReusableView {
         return label
     }()
     
+    private let captionLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20)
+        label.numberOfLines = 0
+        label.textColor = .black
+        label.text = "Some test caption from spiderman for now"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -55,6 +64,9 @@ class TweetHeader: UICollectionReusableView {
         
         addSubview(stack)
         stack.anchor(top: topAnchor, left: leftAnchor, paddingTop: 16, paddingLeft: 16)
+        
+        addSubview(captionLabel)
+        captionLabel.anchor(top: stack.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 20, paddingLeft: 16, paddingRight: 16)
     }
     
     required init?(coder: NSCoder) {
