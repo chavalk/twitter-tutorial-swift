@@ -11,7 +11,18 @@ class TweetController: UICollectionViewController {
     
     // MARK: - Properties
     
+    private let tweet: Tweet
+    
     // MARK: - Lifecycle
+    
+    init(tweet: Tweet) {
+        self.tweet = tweet
+        super.init(collectionViewLayout: UICollectionViewFlowLayout())
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +30,6 @@ class TweetController: UICollectionViewController {
     }
     
     func configureCollectionView() {
-        collectionView.backgroundColor = .systemPurple
+        collectionView.backgroundColor = .white
     }
 }
