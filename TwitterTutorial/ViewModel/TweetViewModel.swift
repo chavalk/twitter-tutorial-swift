@@ -29,6 +29,12 @@ struct TweetViewModel {
         return "@\(user.username)"
     }
     
+    var headerTimestamp: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "h:mm a ∙ MM/dd/yyyy"
+        return formatter.string(from: tweet.timestamp)
+    }
+    
     var userInfoText: NSAttributedString {
         let title = NSMutableAttributedString(string: user.fullName, attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
         
