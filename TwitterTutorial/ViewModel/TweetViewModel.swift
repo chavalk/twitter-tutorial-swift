@@ -25,6 +25,10 @@ struct TweetViewModel {
         return formatter.string(from: tweet.timestamp, to: now) ?? "2m"
     }
     
+    var usernameText: String {
+        return "@\(user.username)"
+    }
+    
     var userInfoText: NSAttributedString {
         let title = NSMutableAttributedString(string: user.fullName, attributes: [.font: UIFont.boldSystemFont(ofSize: 14)])
         
