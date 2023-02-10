@@ -64,4 +64,8 @@ struct TweetViewModel {
         
         return attributedTitle
     }
+    
+    func size(withText text: String, forWidth width: CGFloat) -> CGSize {
+        
+    }
 }
