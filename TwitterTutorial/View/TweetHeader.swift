@@ -71,19 +71,8 @@ class TweetHeader: UICollectionReusableView {
         return button
     }()
     
-    private lazy var retweetsLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "2 Retweets"
-        return label
-    }()
-    
-    private lazy var likesLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "0 Likes"
-        return label
-    }()
+    private lazy var retweetsLabel = UILabel()
+    private lazy var likesLabel = UILabel()
     
     private lazy var statsView: UIView = {
         let view = UIView()
