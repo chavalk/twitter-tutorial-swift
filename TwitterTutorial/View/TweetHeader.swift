@@ -208,7 +208,7 @@ class TweetHeader: UICollectionReusableView {
         
         captionLabel.text = tweet.caption
         fullNameLabel.text = tweet.user.fullName
-        usernameLabel.text = viewModel.userInfoText
+        usernameLabel.text = viewModel.usernameText
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
     }
     
