@@ -36,11 +36,11 @@ struct TweetViewModel {
     }
     
     var retweetsAttributedString: NSAttributedString? {
-        return attributedText(withValue: tweet.retweetCount, text: " Retweets")
+        return attributedText(withValue: tweet.retweetCount, text: "Retweets")
     }
     
     var likesAttributedString: NSAttributedString? {
-        return attributedText(withValue: tweet.likes, text: " Likes")
+        return attributedText(withValue: tweet.likes, text: "Likes")
     }
     
     var userInfoText: NSAttributedString {
@@ -60,7 +60,7 @@ struct TweetViewModel {
     
     fileprivate func attributedText(withValue value: Int, text: String) -> NSAttributedString {
         let attributedTitle = NSMutableAttributedString(string: "\(value)", attributes: [.font : UIFont.boldSystemFont(ofSize: 14)])
-        attributedTitle.append(NSAttributedString(string: "\(text)", attributes: [.font : UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
+        attributedTitle.append(NSAttributedString(string: " \(text)", attributes: [.font : UIFont.systemFont(ofSize: 14), .foregroundColor: UIColor.lightGray]))
         
         return attributedTitle
     }
