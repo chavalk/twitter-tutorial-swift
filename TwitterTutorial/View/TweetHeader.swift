@@ -210,6 +210,7 @@ class TweetHeader: UICollectionReusableView {
         fullNameLabel.text = tweet.user.fullName
         usernameLabel.text = viewModel.usernameText
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        dateLabel.text = viewModel.headerTimestamp
     }
     
     func createButton(withImageName imageName: String) -> UIButton {
