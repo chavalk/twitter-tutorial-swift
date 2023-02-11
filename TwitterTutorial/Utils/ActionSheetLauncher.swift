@@ -17,4 +17,10 @@ class ActionSheetLauncher: NSObject {
         self.user = user
         super.init()
     }
+    
+    // MARK: - Helpers
+    
+    func show() {
+        
+    }
 }
