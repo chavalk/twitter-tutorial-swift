@@ -61,7 +61,7 @@ struct TweetService {
         }
     }
     
-    func fetchReplies(forTweet tweet: Tweet, completion: @escaping(DatabaseCompletion)) {
+    func fetchReplies(forTweet tweet: Tweet, completion: @escaping([Tweet]) -> Void) {
         
     }
 }
