@@ -21,9 +21,13 @@ struct UploadTweetViewModel {
     init(config: UploadTweetConfiguration) {
         switch config {
         case .tweet:
-            <#code#>
-        case .reply(_):
-            <#code#>
+            actionButtonTitle = "Tweet"
+            placeholderText = "What's happening"
+            shouldShorReplyLabel = false
+        case .reply(let tweet):
+            actionButtonTitle = "Reply"
+            placeholderText = "Tweet your reply"
+            shouldShorReplyLabel = true
         }
     }
 }
