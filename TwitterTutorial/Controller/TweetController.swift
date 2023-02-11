@@ -34,6 +34,10 @@ class TweetController: UICollectionViewController {
         print("DEBUG: Tweet caption is \(tweet.caption)")
     }
     
+    // MARK: - API
+    
+    // MARK: - Helpers
+    
     func configureCollectionView() {
         collectionView.backgroundColor = .white
         
