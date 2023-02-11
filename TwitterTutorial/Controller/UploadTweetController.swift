@@ -7,11 +7,6 @@
 
 import UIKit
 
-enum UploadTweetConfiguration {
-    case tweet
-    case reply(Tweet)
-}
-
 class UploadTweetController: UIViewController {
     
     // MARK: - Properties

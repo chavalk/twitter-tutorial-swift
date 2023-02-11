@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum UploadTweetConfiguration {
+    case tweet
+    case reply(Tweet)
+}
+
 struct UploadTweetViewModel {
     
     let actionButtonTitle: String
