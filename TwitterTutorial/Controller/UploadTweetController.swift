@@ -41,6 +41,13 @@ class UploadTweetController: UIViewController {
         return iv
     }()
     
+    private let replyLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .lightGray
+        return label
+    }()
+    
     private let captionTextView = CaptionTextView()
     
     // MARK: - Lifecycle
