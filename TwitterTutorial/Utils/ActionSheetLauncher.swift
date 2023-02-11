@@ -15,7 +15,7 @@ class ActionSheetLauncher: NSObject {
     
     private let user: User
     private let tableView = UITableView()
-    private var UIWindow: UIWindow?
+    private var window: UIWindow?
     
     // MARK: - Lifecycle
     
@@ -30,6 +30,12 @@ class ActionSheetLauncher: NSObject {
     
     func show() {
         print("DEBUG: Show action sheet for user \(user.username)")
+        
+        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
+        self.window = window
+        
+        window.addSubview(tableView)
+        tableView.frame = CGRect(x: 0, y: window.frame.height - 300, width: window.frame.width, height: 300)
     }
     
     func configureTableView() {
