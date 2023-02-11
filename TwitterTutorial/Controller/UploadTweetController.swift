@@ -13,6 +13,7 @@ class UploadTweetController: UIViewController {
     
     private let user: User
     private let config: UploadTweetConfiguration
+    private lazy var viewModel = UploadTweetViewModel(config: config)
     
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
