@@ -33,6 +33,7 @@ class TweetController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
+        fetchReplies()
     }
     
     // MARK: - API
