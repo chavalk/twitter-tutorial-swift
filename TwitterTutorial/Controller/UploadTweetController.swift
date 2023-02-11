@@ -41,10 +41,12 @@ class UploadTweetController: UIViewController {
         return iv
     }()
     
-    private let replyLabel: UILabel = {
+    private lazy var replyLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
         label.textColor = .lightGray
+        label.text = "replying to @joker"
+        label.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
         return label
     }()
     
