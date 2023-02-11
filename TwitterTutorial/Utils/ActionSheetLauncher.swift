@@ -5,13 +5,14 @@
 //  Created by Jose Garcia on 2/11/23.
 //
 
-import Foundation
+import UIKit
 
 class ActionSheetLauncher: NSObject {
     
     // MARK: - Properties
     
     private let user: User
+    private let tableView = UITableView()
     
     // MARK: - Lifecycle
     
