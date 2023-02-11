@@ -40,7 +40,10 @@ class ActionSheetLauncher: NSObject {
     // MARK: - Selectors
     
     @objc func handleDismissal() {
-        
+        UIView.animate(withDuration: 0.5) {
+            self.blackView.alpha = 0
+            self.tableView.frame.origin.y += 300
+        }
     }
     
     // MARK: - Helpers
