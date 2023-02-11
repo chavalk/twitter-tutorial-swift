@@ -15,6 +15,7 @@ class ActionSheetLauncher: NSObject {
     
     private let user: User
     private let tableView = UITableView()
+    private var UIWindow: UIWindow?
     
     // MARK: - Lifecycle
     
