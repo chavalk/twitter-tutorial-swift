@@ -15,6 +15,13 @@ struct TweetService {
         
         let values = ["uid": uid, "timestamp": Int(NSDate().timeIntervalSince1970), "likes": 0, "retweets": 0, "caption": caption] as [String : Any]
         
+        switch type {
+        case .tweet:
+            
+        case .reply(let tweet):
+            
+        }
+        
         let ref = REF_TWEETS.childByAutoId()
         
         ref.updateChildValues(values) { error, ref in
