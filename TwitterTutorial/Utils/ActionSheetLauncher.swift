@@ -19,11 +19,23 @@ class ActionSheetLauncher: NSObject {
     init(user: User) {
         self.user = user
         super.init()
+        
+        configureTableView()
     }
     
     // MARK: - Helpers
     
     func show() {
         print("DEBUG: Show action sheet for user \(user.username)")
+    }
+    
+    func configureTableView() {
+        tableView.backgroundColor = .red
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = 60
+        tableView.separatorStyle = .none
+        tableView.layer.cornerRadius = 5
+        tableView.isScrollEnabled = false
     }
 }
