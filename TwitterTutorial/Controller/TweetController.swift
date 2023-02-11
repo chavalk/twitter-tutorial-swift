@@ -36,6 +36,12 @@ class TweetController: UICollectionViewController {
     
     // MARK: - API
     
+    func fetchReplies() {
+        TweetService.shared.fetchReplies(forTweet: tweet) { tweet in
+            <#code#>
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureCollectionView() {
