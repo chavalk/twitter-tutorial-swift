@@ -15,6 +15,9 @@ class TweetController: UICollectionViewController {
     // MARK: - Properties
     
     private let tweet: Tweet
+    private var replies = [Tweet]() {
+        didSet { collectionView.reloadData() }
+    }
     
     // MARK: - Lifecycle
     
