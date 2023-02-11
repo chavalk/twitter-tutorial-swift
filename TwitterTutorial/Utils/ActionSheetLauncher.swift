@@ -55,7 +55,12 @@ class ActionSheetLauncher: NSObject {
         blackView.frame = window.frame
         
         window.addSubview(tableView)
-        tableView.frame = CGRect(x: 0, y: window.frame.height - 300, width: window.frame.width, height: 300)
+        tableView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 300)
+        
+        UIView.animate(withDuration: 0.5) {
+            self.blackView.alpha = 1
+            self.tableView.frame.origin.y -= 300
+        }
     }
     
     func configureTableView() {
