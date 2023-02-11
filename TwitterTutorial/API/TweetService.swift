@@ -17,17 +17,13 @@ struct TweetService {
         
         switch type {
         case .tweet:
-            
+            REF_TWEETS.childByAutoId().updateChildValues(values) { error, ref in
+                // Update user-tweet structure after tweet upload completes
+                guard let tweetID = ref.key else { return }
+                REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
+            }
         case .reply(let tweet):
-            
-        }
-        
-        let ref = REF_TWEETS.childByAutoId()
-        
-        ref.updateChildValues(values) { error, ref in
-            // Update user-tweet structure after tweet upload completes
-            guard let tweetID = ref.key else { return }
-            REF_USER_TWEETS.child(uid).updateChildValues([tweetID: 1], withCompletionBlock: completion)
+            REF_TWEET_REPLIES.child(tweet.tweetID).childByAutoId().updateChildValues(values, withCompletionBlock: completion)
         }
     }
     
