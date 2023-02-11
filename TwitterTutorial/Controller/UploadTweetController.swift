@@ -7,11 +7,17 @@
 
 import UIKit
 
+enum UploadTweetConfiguration {
+    case tweet
+    case reply(Tweet)
+}
+
 class UploadTweetController: UIViewController {
     
     // MARK: - Properties
     
     private let user: User
+    private let config: UploadTweetConfiguration
     
     private lazy var actionButton: UIButton = {
         let button = UIButton(type: .system)
@@ -43,8 +49,9 @@ class UploadTweetController: UIViewController {
     
     // MARK: - Lifecycle
     
-    init(user: User) {
+    init(user: User, config: UploadTweetConfiguration) {
         self.user = user
+        self.config = config
         super.init(nibName: nil, bundle: nil)
     }
     
