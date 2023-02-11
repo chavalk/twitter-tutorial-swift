@@ -38,8 +38,8 @@ class TweetController: UICollectionViewController {
     // MARK: - API
     
     func fetchReplies() {
-        TweetService.shared.fetchReplies(forTweet: tweet) { tweet in
-            <#code#>
+        TweetService.shared.fetchReplies(forTweet: tweet) { replies in
+            self.replies = replies
         }
     }
     
