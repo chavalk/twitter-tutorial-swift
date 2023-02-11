@@ -13,6 +13,8 @@ class ActionSheetLauncher: NSObject {
     
     private let user: User
     
+    // MARK: - Lifecycle
+    
     init(user: User) {
         self.user = user
         super.init()
