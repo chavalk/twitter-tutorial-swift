@@ -80,7 +80,7 @@ class ActionSheetLauncher: NSObject {
         blackView.frame = window.frame
         
         window.addSubview(tableView)
-        let height = CGFloat(3 * 60)
+        let height = CGFloat(3 * 60) + 100
         tableView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 300)
         
         UIView.animate(withDuration: 0.5) {
