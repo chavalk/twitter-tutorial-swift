@@ -114,5 +114,11 @@ extension ActionSheetLauncher: UITableViewDataSource {
 }
 
 extension ActionSheetLauncher: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 60
+    }
 }
