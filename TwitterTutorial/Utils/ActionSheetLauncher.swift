@@ -67,7 +67,7 @@ class ActionSheetLauncher: NSObject {
     }
     
     func configureTableView() {
-        tableView.backgroundColor = .red
+        tableView.backgroundColor = .white
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 60
