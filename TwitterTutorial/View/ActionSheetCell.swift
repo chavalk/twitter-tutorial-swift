@@ -11,6 +11,21 @@ class ActionSheetCell: UITableViewCell {
     
     // MARK: - Properties
     
+    private let optionImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.clipsToBounds = true
+        iv.image = UIImage(named: "twitter_logo_blue")
+        return iv
+    }()
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.text = "Test Option"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
