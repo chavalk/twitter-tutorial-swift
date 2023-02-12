@@ -30,6 +30,15 @@ class ActionSheetCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        addSubview(optionImageView)
+        optionImageView.centerY(inView: self)
+        optionImageView.anchor(left: leftAnchor, paddingLeft: 8)
+        optionImageView.setDimensions(width: 36, height: 36)
+        
+        addSubview(titleLabel)
+        titleLabel.centerY(inView: self)
+        titleLabel.anchor(left: optionImageView.rightAnchor, paddingLeft: 12)
     }
     
     required init?(coder: NSCoder) {
