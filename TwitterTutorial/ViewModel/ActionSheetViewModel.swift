@@ -11,6 +11,19 @@ struct ActionSheetViewModel {
     
     private let user: User
     
+    var options: [ActionSheetOptions] {
+        var results = [ActionSheetOptions]()
+        
+        if user.isCurrentUser {
+            results.append(.delete)
+        } else {
+            let followOption: ActionSheetOptions = user.isFollowed ? .unfollow(user) : .follow(user)
+            results.append(followOption)
+        }
+        
+        return results
+    }
+    
     init(user: User) {
         self.user = user
     }
