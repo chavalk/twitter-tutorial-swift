@@ -75,7 +75,7 @@ class ActionSheetLauncher: NSObject {
         tableView.layer.cornerRadius = 5
         tableView.isScrollEnabled = false
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(ActionSheetCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
@@ -85,7 +85,7 @@ extension ActionSheetLauncher: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ActionSheetCell
         return cell
     }
 }
