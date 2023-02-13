@@ -76,6 +76,11 @@ class ActionSheetLauncher: NSObject {
     
     // MARK: - Helpers
     
+    func showTableView(_ shouldShow: Bool) {
+        guard let window = window else { return }
+        guard let height =
+    }
+    
     func show() {
         print("DEBUG: Show action sheet for user \(user.username)")
         
