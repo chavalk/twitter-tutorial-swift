@@ -103,6 +103,8 @@ class ActionSheetLauncher: NSObject {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension ActionSheetLauncher: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.options.count
@@ -114,6 +116,8 @@ extension ActionSheetLauncher: UITableViewDataSource {
         return cell
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension ActionSheetLauncher: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
