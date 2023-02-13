@@ -9,6 +9,10 @@ import UIKit
 
 private let reuseIdentifier = "ActionSheetCell"
 
+protocol ActionSheetLauncherDelegate: class {
+    func didSelect(option: ActionSheetOptions)
+}
+
 class ActionSheetLauncher: NSObject {
     
     // MARK: - Properties
@@ -17,6 +21,7 @@ class ActionSheetLauncher: NSObject {
     private let tableView = UITableView()
     private var window: UIWindow?
     private lazy var viewModel = ActionSheetViewModel(user: user)
+    weak var delegate: ActionSheetLauncherDelegate?
     
     private lazy var blackView: UIView = {
         let view = UIView()
@@ -130,6 +135,6 @@ extension ActionSheetLauncher: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let option = viewModel.options[indexPath.row]
-        print("DEBUG: Selected option is \(option.description)")
+        delegate?.didSelect(option: option)
     }
 }
