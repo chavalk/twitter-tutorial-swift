@@ -79,7 +79,9 @@ class ActionSheetLauncher: NSObject {
     
     func showTableView(_ shouldShow: Bool) {
         guard let window = window else { return }
-        guard let height =
+        guard let height = tableViewHeight else { return }
+        let y = shouldShow ? window.frame.height - height : window.frame.height
+        tableView.frame.origin.y = y
     }
     
     func show() {
@@ -98,7 +100,7 @@ class ActionSheetLauncher: NSObject {
         
         UIView.animate(withDuration: 0.5) {
             self.blackView.alpha = 1
-            self.tableView.frame.origin.y -= height
+            self.showTableView(true)
         }
     }
     
@@ -143,10 +145,11 @@ extension ActionSheetLauncher: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let option = viewModel.options[indexPath.row]
         
-        UIView.animate(withDuration: 0.5) {
-            <#code#>
+        UIView.animate(withDuration: 0.5, animations: {
+            self.blackView.alpha = 0
+            self.showTableView(false)
+        }) { _ in
+            self.delegate?.didSelect(option: option)
         }
-        
-        delegate?.didSelect(option: option)
     }
 }
