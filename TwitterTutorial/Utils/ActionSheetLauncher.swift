@@ -22,6 +22,7 @@ class ActionSheetLauncher: NSObject {
     private var window: UIWindow?
     private lazy var viewModel = ActionSheetViewModel(user: user)
     weak var delegate: ActionSheetLauncherDelegate?
+    private var tableViewHeight: CGFloat?
     
     private lazy var blackView: UIView = {
         let view = UIView()
@@ -92,6 +93,7 @@ class ActionSheetLauncher: NSObject {
         
         window.addSubview(tableView)
         let height = CGFloat(viewModel.options.count * 60) + 100
+        self.tableViewHeight = height
         tableView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: 300)
         
         UIView.animate(withDuration: 0.5) {
