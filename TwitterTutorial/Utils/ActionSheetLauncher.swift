@@ -135,6 +135,11 @@ extension ActionSheetLauncher: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let option = viewModel.options[indexPath.row]
+        
+        UIView.animate(withDuration: 0.5) {
+            <#code#>
+        }
+        
         delegate?.didSelect(option: option)
     }
 }
