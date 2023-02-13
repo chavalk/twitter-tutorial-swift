@@ -16,6 +16,7 @@ class ActionSheetLauncher: NSObject {
     private let user: User
     private let tableView = UITableView()
     private var window: UIWindow?
+    private lazy var viewModel = ActionSheetViewModel(user: user)
     
     private lazy var blackView: UIView = {
         let view = UIView()
