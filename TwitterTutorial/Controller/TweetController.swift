@@ -112,3 +112,13 @@ extension TweetController: TweetHeaderDelegate {
         }
     }
 }
+
+// MARK: - ActionSheetLauncherDelegate
+
+extension TweetController: ActionSheetLauncherDelegate {
+    func didSelect(option: ActionSheetOptions) {
+        print("DEBUG: Option in controller is \(option.description)")
+    }
+    
+    
+}
