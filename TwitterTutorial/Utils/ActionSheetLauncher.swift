@@ -127,4 +127,9 @@ extension ActionSheetLauncher: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 60
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let option = viewModel.options[indexPath.row]
+        print("DEBUG: Selected option is \(option.description)")
+    }
 }
