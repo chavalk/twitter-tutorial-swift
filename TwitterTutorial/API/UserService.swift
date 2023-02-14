@@ -69,4 +69,8 @@ struct UserService {
             }
         }
     }
+    
+    func checkIfUserLikedTweet(_ tweet: Tweet, completion: @escaping(Bool) -> Void) {
+        
+    }
 }
