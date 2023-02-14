@@ -76,4 +76,10 @@ struct TweetService {
             }
         }
     }
+    
+    func likeTweet(tweet: Tweet, completion: @escaping(DatabaseCompletion)) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let likes = tweet.didLike ? tweet.likes - 1 : tweet.likes + 1
+    }
 }
