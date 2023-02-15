@@ -13,6 +13,15 @@ struct NotificationViewModel {
     private let type: NotificationType
     private let user: User
     
+    var timestampString: String? {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.second, .minute, .hour, .day, .weekOfMonth]
+        formatter.maximumUnitCount = 1
+        formatter.unitsStyle = .abbreviated
+        let now = Date()
+        return formatter.string(from: notification.timestamp, to: now) ?? "2m"
+    }
+    
     var notificationMessage: String {
         switch type {
         case .follow: return " started following you"
@@ -24,7 +33,7 @@ struct NotificationViewModel {
     }
     
     var notificationText: NSAttributedString? {
-        guard let timestamp = timestamp else { return nil }
+        guard let timestamp = timestampString else { return nil }
         let attributedText = NSMutableAttributedString(string: user.username, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)])
         attributedText.append(NSAttributedString(string: notificationMessage, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]))
         attributedText.append(NSAttributedString(string: " \(timestamp)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
