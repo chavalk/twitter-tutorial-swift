@@ -64,6 +64,10 @@ class NotificationCell: UITableViewCell {
     
     // MARK: - Helpers
     func configure() {
+        guard let notification = notification else { return }
+        let viewModel = NotificationViewModel(notification: notification)
         
+        profileImageView.sd_setImage(with: viewModel.profileImageUrl)
+        notificationLabel.attributedText = viewModel.notificationText
     }
 }
