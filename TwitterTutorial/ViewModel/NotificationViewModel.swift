@@ -41,6 +41,10 @@ struct NotificationViewModel {
         return attributedText
     }
     
+    var profileImageUrl: URL? {
+        return user.profileImageUrl
+    }
+    
     init(notification: Notification) {
         self.notification = notification
         self.type = notification.type
