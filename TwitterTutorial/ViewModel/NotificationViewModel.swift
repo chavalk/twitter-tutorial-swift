@@ -1,0 +1,29 @@
+//
+//  NotificationViewModel.swift
+//  TwitterTutorial
+//
+//  Created by Jose Garcia on 2/15/23.
+//
+
+import Foundation
+
+struct NotificationViewModel {
+    
+    private let notification: Notification
+    private let type: NotificationType
+    
+    var notificationMessage: String {
+        switch type {
+        case .follow: return " started following you"
+        case .like: return " liked your tweet"
+        case .reply: return " replied to your tweet"
+        case .retweet: return " retweeted your tweet"
+        case .mention: return " mentioned you in a tweet"
+        }
+    }
+    
+    init(notification: Notification) {
+        self.notification = notification
+        self.type = notification.type
+    }
+}
