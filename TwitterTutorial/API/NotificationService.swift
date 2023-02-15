@@ -17,6 +17,7 @@ struct NotificationService {
         
         if let tweet = tweet {
             values["tweetID"] = tweet.tweetID
+            REF_NOTIFICATIONS.child(tweet.user.uid).childByAutoId().updateChildValues(values)
         }
     }
 }
