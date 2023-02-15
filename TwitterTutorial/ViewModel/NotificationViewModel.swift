@@ -5,12 +5,13 @@
 //  Created by Jose Garcia on 2/15/23.
 //
 
-import Foundation
+import UIKit
 
 struct NotificationViewModel {
     
     private let notification: Notification
     private let type: NotificationType
+    private let user: User
     
     var notificationMessage: String {
         switch type {
@@ -24,7 +25,7 @@ struct NotificationViewModel {
     
     var notificationText: NSAttributedString? {
         guard let timestamp = timestamp else { return nil }
-        let attributedText = NSMutableAttributedString(string: user.username attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)])
+        let attributedText = NSMutableAttributedString(string: user.username, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)])
         attributedText.append(NSAttributedString(string: notificationMessage, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12)]))
         attributedText.append(NSAttributedString(string: " \(timestamp)", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
         
