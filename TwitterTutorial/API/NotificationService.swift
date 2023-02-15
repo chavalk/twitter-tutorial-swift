@@ -11,6 +11,6 @@ struct NotificationService {
     static let shared = NotificationService()
     
     func uploadNotification(type: NotificationType) {
-        
+        print("DEBUG: Type is \(type)")
     }
 }
