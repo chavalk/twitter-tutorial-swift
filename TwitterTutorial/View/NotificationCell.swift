@@ -26,6 +26,14 @@ class NotificationCell: UITableViewCell {
         return iv
     }()
     
+    let notificationLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 2
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.text = "Some test notification message"
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
