@@ -30,6 +30,8 @@ class NotificationsController: UITableViewController {
         navigationItem.title = "Notifications"
         
         tableView.register(NotificationCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.rowHeight = 60
+        tableView.separatorStyle = .none
     }
 }
 
