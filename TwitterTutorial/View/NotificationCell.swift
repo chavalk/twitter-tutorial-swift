@@ -38,6 +38,13 @@ class NotificationCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        let stack = UIStackView(arrangedSubviews: [profileImageView, notificationLabel])
+        stack.spacing = 8
+        stack.alignment = .leading
+        
+        addSubview(stack)
+        stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
     }
     
     required init?(coder: NSCoder) {
