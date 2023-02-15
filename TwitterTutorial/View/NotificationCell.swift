@@ -19,6 +19,8 @@ class NotificationCell: UITableViewCell {
         didSet { configure() }
     }
     
+    weak var delegate: NotificationCellDelegate?
+    
     private lazy var profileImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
