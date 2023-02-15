@@ -28,6 +28,8 @@ class NotificationsController: UITableViewController {
     func configureUI() {
         view.backgroundColor = .white
         navigationItem.title = "Notifications"
+        
+        tableView.register(NotificationCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
