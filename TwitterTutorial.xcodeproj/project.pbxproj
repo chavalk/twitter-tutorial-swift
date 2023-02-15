@@ -36,6 +36,7 @@
 		BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D42981EF9E001676A8 /* RegistrationController.swift */; };
 		BEA715D7298200DF001676A8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D6298200DF001676A8 /* Utilities.swift */; };
 		BEA7C2C5299C7FCE0041706C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7C2C4299C7FCE0041706C /* Notification.swift */; };
+		BEA7C2C7299C85A40041706C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7C2C6299C85A40041706C /* NotificationService.swift */; };
 		BEC2CBDA299838F000308965 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBD9299838F000308965 /* ActionSheetLauncher.swift */; };
 		BEC2CBDC299864BC00308965 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBDB299864BC00308965 /* ActionSheetCell.swift */; };
 		BEC2CBDE29999B9400308965 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBDD29999B9400308965 /* ActionSheetViewModel.swift */; };
@@ -85,6 +86,7 @@
 		BEA715D42981EF9E001676A8 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		BEA715D6298200DF001676A8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BEA7C2C4299C7FCE0041706C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		BEA7C2C6299C85A40041706C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		BEC2CBD9299838F000308965 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		BEC2CBDB299864BC00308965 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		BEC2CBDD29999B9400308965 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				BE750D952984E4D500163796 /* AuthService.swift */,
 				BE901F5129859EC500026803 /* UserService.swift */,
 				BE446EDE298A205400276981 /* TweetService.swift */,
+				BEA7C2C6299C85A40041706C /* NotificationService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				BE901F542986ED7200026803 /* User.swift in Sources */,
 				BEE599D6297F9F7800518557 /* SceneDelegate.swift in Sources */,
 				BEE599F4297FA47B00518557 /* MainTabController.swift in Sources */,
+				BEA7C2C7299C85A40041706C /* NotificationService.swift in Sources */,
 				BEA715D32981EE8F001676A8 /* LoginController.swift in Sources */,
 				BE12EF622994A0D500B37938 /* TweetHeader.swift in Sources */,
 				BE714A93298B3152004C4185 /* TweetViewModel.swift in Sources */,
