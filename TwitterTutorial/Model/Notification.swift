@@ -7,6 +7,14 @@
 
 import Foundation
 
+enum NotificationType: Int {
+    case follow
+    case like
+    case reply
+    case retweet
+    case mention
+}
+
 struct Notification {
     let tweetID: String?
     var timestamp: Date!
