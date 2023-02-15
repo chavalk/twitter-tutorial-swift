@@ -41,7 +41,7 @@ class NotificationCell: UITableViewCell {
         
         let stack = UIStackView(arrangedSubviews: [profileImageView, notificationLabel])
         stack.spacing = 8
-        stack.alignment = .leading
+        stack.alignment = .center
         
         addSubview(stack)
         stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
