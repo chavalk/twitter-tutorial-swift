@@ -23,6 +23,14 @@ class NotificationsController: UITableViewController {
         configureUI()
     }
     
+    // MARK: - API
+    
+    func fetchNotifications() {
+        NotificationService.shared.fetchNotifications { notifications in
+            self.notifications = notifications
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
