@@ -70,7 +70,12 @@ extension NotificationsController {
 extension NotificationsController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let notification = notifications[indexPath.row]
-        print("DEBUG: Tweet ID is \(notification.tweetID)")
+        guard let tweetID = notification.tweetID else { return }
+        
+        TweetService.shared.fetchTweet(withTweetID: tweetID) { tweet in
+            let controller = TweetController(tweet: tweet)
+            self.navigationController?.pushViewController(controller, animated: true)
+        }
     }
 }
 
