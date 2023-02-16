@@ -67,6 +67,12 @@ class NotificationCell: UITableViewCell {
         contentView.addSubview(stack)
         stack.centerY(inView: self, leftAnchor: leftAnchor, paddingLeft: 12)
         stack.anchor(right: rightAnchor, paddingRight: 12)
+        
+        addSubview(followButton)
+        followButton.centerY(inView: self)
+        followButton.setDimensions(width: 88, height: 32)
+        followButton.layer.cornerRadius = 32 / 2
+        followButton.anchor(right: rightAnchor, paddingRight: 12)
     }
     
     required init?(coder: NSCoder) {
