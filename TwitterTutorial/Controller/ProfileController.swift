@@ -24,7 +24,13 @@ class ProfileController: UICollectionViewController {
     private var likedTweets = [Tweet]()
     private var replies = [Tweet]()
     
-    private var currentDataSource = [Tweet]()
+    private var currentDataSource: [Tweet] {
+        switch selectedFilter {
+        case .tweets: return tweets
+        case .replies: return replies
+        case .likes: return likedTweets
+        }
+    }
     
     // MARK: - Lifecycle
     
