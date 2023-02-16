@@ -16,9 +16,11 @@ class ProfileController: UICollectionViewController {
     
     private var user: User
     
-    private var tweets = [Tweet]() {
-        didSet { collectionView.reloadData() }
-    }
+    private var tweets = [Tweet]()
+    private var likedTweets = [Tweet]()
+    private var replies = [Tweet]()
+    
+    private var currentDataSource = [Tweet]()
     
     // MARK: - Lifecycle
     
