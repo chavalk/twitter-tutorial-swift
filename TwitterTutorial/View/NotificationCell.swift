@@ -99,5 +99,6 @@ class NotificationCell: UITableViewCell {
         notificationLabel.attributedText = viewModel.notificationText
         
         followButton.isHidden = viewModel.shouldHideFollowButton
+        followButton.setTitle(viewModel.followButtonText, for: .normal)
     }
 }
