@@ -9,6 +9,7 @@ import UIKit
 
 protocol NotificationCellDelegate: class {
     func didTapProfileImage(_ cell: NotificationCell)
+    func didTapFollow(_ cell: NotificationCell)
 }
 
 class NotificationCell: UITableViewCell {
@@ -86,7 +87,7 @@ class NotificationCell: UITableViewCell {
     }
     
     @objc func handleFollowTapped() {
-        
+        delegate?.didTapFollow(self)
     }
     
     // MARK: - Helpers
@@ -96,5 +97,7 @@ class NotificationCell: UITableViewCell {
         
         profileImageView.sd_setImage(with: viewModel.profileImageUrl)
         notificationLabel.attributedText = viewModel.notificationText
+        
+        followButton.isHidden = viewModel.shouldHideFollowButton
     }
 }
