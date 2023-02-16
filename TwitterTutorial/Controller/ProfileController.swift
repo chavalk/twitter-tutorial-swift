@@ -16,6 +16,10 @@ class ProfileController: UICollectionViewController {
     
     private var user: User
     
+    private var selectedFilter: ProfileFilterOptions = .tweets {
+        didSet { collectionView.reloadData() }
+    }
+    
     private var tweets = [Tweet]()
     private var likedTweets = [Tweet]()
     private var replies = [Tweet]()
