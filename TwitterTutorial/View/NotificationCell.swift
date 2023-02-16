@@ -36,6 +36,17 @@ class NotificationCell: UITableViewCell {
         return iv
     }()
     
+    private lazy var followButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Loading", for: .normal)
+        button.setTitleColor(.twitterBlue, for: .normal)
+        button.backgroundColor = .white
+        button.layer.borderColor = UIColor.twitterBlue.cgColor
+        button.layer.borderWidth = 2
+        button.addTarget(self, action: #selector(handleFollowTapped), for: .touchUpInside)
+        return button
+    }()
+    
     let notificationLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
@@ -66,6 +77,10 @@ class NotificationCell: UITableViewCell {
     
     @objc func handleProfileImageTapped() {
         delegate?.didTapProfileImage(self)
+    }
+    
+    @objc func handleFollowTapped() {
+        
     }
     
     // MARK: - Helpers
