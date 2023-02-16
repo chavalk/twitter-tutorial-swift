@@ -187,11 +187,6 @@ class ProfileHeader: UICollectionReusableView {
 
 extension ProfileHeader: ProfileFilterViewDelegate {
     func filterView(_ view: ProfileFilterView, didSelect indexPath: IndexPath) {
-//        guard let cell = view.collectionView.cellForItem(at: indexPath) as? ProfileFilterCell else { return }
-//        
-//        let xPosition = cell.frame.origin.x
-//        UIView.animate(withDuration: 0.3) {
-//            self.underlineView.frame.origin.x = xPosition
-//        }
+        
     }
 }
