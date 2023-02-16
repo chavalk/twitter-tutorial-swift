@@ -65,6 +65,15 @@ extension NotificationsController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension NotificationsController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let notification = notifications[indexPath.row]
+        print("DEBUG: Tweet ID is \(notification.tweetID)")
+    }
+}
+
 // MARK: - NotificationCellDelegate
 
 extension NotificationsController: NotificationCellDelegate {
