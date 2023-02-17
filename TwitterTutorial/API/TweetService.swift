@@ -70,6 +70,18 @@ struct TweetService {
         }
     }
     
+    func fetchReplies(forUser user: User, completion: @escaping([Tweet]) -> Void) {
+        var replies = [Tweet]()
+        
+        REF_USER_REPLIES.child(user.uid).observe(.childAdded) { snapshot in
+            let tweetKey = snapshot.key
+            guard let replyKey = snapshot.value as? String else { return }
+            
+            print("DEBUG: Tweet key is \(tweetKey)")
+            print("DEBUG: Reply key is \(replyKey)")
+        }
+    }
+    
     func fetchReplies(forTweet tweet: Tweet, completion: @escaping([Tweet]) -> Void) {
         var tweets = [Tweet]()
         
