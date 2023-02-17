@@ -64,6 +64,10 @@ struct TweetViewModel {
         return UIImage(named: imageName)!
     }
     
+    var shouldHideReplyLabel: Bool {
+        return !tweet.isReply
+    }
+    
     // MARK: - Lifecycle
     
     init(tweet: Tweet) {
