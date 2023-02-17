@@ -174,5 +174,7 @@ class TweetCell: UICollectionViewCell {
         
         likeButton.tintColor = viewModel.likeButtonTintColor
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        
+        replyLabel.isHidden = viewModel.shouldHideReplyLabel
     }
 }
