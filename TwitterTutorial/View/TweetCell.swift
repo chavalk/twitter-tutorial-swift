@@ -42,7 +42,6 @@ class TweetCell: UICollectionViewCell {
         let label = UILabel()
         label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 12)
-        label.text = "→ replying to @joker"
         return label
     }()
     
@@ -51,7 +50,6 @@ class TweetCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 0
         label.textColor = .black
-        label.text = "Some test caption"
         return label
     }()
     
