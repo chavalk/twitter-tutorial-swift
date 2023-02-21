@@ -68,8 +68,9 @@ struct TweetViewModel {
         return !tweet.isReply
     }
     
-    var replyText: String {
-        return "→ replying to @\(user.username)"
+    var replyText: String? {
+        guard let replyingToUsername = tweet.replyingTo else { return nil }
+        return "→ replying to @\(replyingToUsername)"
     }
     
     // MARK: - Lifecycle
