@@ -68,6 +68,10 @@ struct TweetViewModel {
         return !tweet.isReply
     }
     
+    var replyText: String {
+        return "→ replying to @\(user.username)"
+    }
+    
     // MARK: - Lifecycle
     
     init(tweet: Tweet) {
