@@ -174,5 +174,6 @@ class TweetCell: UICollectionViewCell {
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
         
         replyLabel.isHidden = viewModel.shouldHideReplyLabel
+        replyLabel.text = viewModel.replyText
     }
 }
