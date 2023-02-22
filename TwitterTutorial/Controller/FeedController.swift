@@ -52,6 +52,9 @@ class FeedController: UICollectionViewController {
         TweetService.shared.fetchTweets { tweets in
             self.tweets = tweets
             self.checkIfUserLikedTweets(tweets)
+            
+            self.tweets = tweets.sorted(by: { $0.timestamp > $1.timestamp })
+            
             self.collectionView.refreshControl?.endRefreshing()
         }
     }
