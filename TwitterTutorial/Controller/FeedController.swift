@@ -47,9 +47,12 @@ class FeedController: UICollectionViewController {
     // MARK: - API
     
     func fetchTweets() {
+        collectionView.refreshControl?.beginRefreshing()
+        
         TweetService.shared.fetchTweets { tweets in
             self.tweets = tweets
             self.checkIfUserLikedTweets(tweets)
+            self.collectionView.refreshControl?.endRefreshing()
         }
     }
     
