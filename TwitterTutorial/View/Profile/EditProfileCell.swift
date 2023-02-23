@@ -11,6 +11,12 @@ class EditProfileCell: UITableViewCell {
     
     // MARK: - Properties
     
+    let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        return label
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
