@@ -12,6 +12,7 @@ class EditProfileController: UITableViewController {
     // MARK: - Properties
     
     private let user: User
+    private lazy var headerView = EditProfileHeader(user: user)
     
     // MARK: - Lifecycle
     
