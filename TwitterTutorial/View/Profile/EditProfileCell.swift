@@ -46,5 +46,11 @@ class EditProfileCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleUpdateUserInfo() {
+        
+    }
+    
     // MARK: - Helpers
 }
