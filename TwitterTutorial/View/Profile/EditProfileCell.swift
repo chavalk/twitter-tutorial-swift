@@ -14,6 +14,7 @@ class EditProfileCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
+        label.text = "Test Title"
         return label
     }()
     
@@ -41,6 +42,10 @@ class EditProfileCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
+        
+        contentView.addSubview(titleLabel)
+        titleLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        titleLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 16)
     }
     
     required init?(coder: NSCoder) {
