@@ -27,6 +27,14 @@ class EditProfileCell: UITableViewCell {
         return tf
     }()
     
+    let bioTextView: CaptionTextView = {
+        let tv = CaptionTextView()
+        tv.font = UIFont.systemFont(ofSize: 14)
+        tv.textColor = .twitterBlue
+        tv.placeholderLabel.text = "Bio"
+        return tv
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
