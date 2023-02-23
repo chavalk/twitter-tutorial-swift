@@ -68,6 +68,8 @@ class EditProfileController: UITableViewController {
         tableView.tableFooterView = UIView()
         
         headerView.delegate = self
+        
+        tableView.register(EditProfileCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
 }
 
