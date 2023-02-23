@@ -38,6 +38,11 @@ class EditProfileHeader: UIView {
         super.init(frame: .zero)
         
         backgroundColor = .twitterBlue
+        
+        addSubview(profileImageView)
+        profileImageView.center(inView: self, yConstant: -16)
+        profileImageView.setDimensions(width: 100, height: 100)
+        profileImageView.layer.cornerRadius = 100 / 2
     }
     
     required init?(coder: NSCoder) {
