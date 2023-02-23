@@ -13,6 +13,15 @@ class EditProfileHeader: UIView {
     
     private let user: User
     
+    let profileImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.backgroundColor = .lightGray
+        iv.layer.borderColor = UIColor.white.cgColor
+        return iv
+    }()
+    
     // MARK: - Lifecycle
     
     init(user: User) {
