@@ -26,6 +26,8 @@ class EditProfileController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureNavigationBar()
     }
     
     // MARK: - Selectors
@@ -33,4 +35,12 @@ class EditProfileController: UITableViewController {
     // MARK: - API
     
     // MARK: - Helpers
+    
+    func configureNavigationBar() {
+        navigationController?.navigationBar.barTintColor = .twitterBlue
+        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isTranslucent = false
+        
+        navigationItem.title = "Edit Profile"
+    }
 }
