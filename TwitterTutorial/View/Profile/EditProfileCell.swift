@@ -27,8 +27,8 @@ class EditProfileCell: UITableViewCell {
         return tf
     }()
     
-    let bioTextView: CaptionTextView = {
-        let tv = CaptionTextView()
+    let bioTextView: InputTextView = {
+        let tv = InputTextView()
         tv.font = UIFont.systemFont(ofSize: 14)
         tv.textColor = .twitterBlue
         tv.placeholderLabel.text = "Bio"
