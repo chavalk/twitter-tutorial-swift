@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EditProfileHeaderDelegate: class {
+    func didTapChangeProfilePhoto()
+}
+
 class EditProfileHeader: UIView {
     
     // MARK: - Properties
