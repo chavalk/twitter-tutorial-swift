@@ -48,6 +48,7 @@ class EditProfileController: UITableViewController {
         navigationController?.navigationBar.barTintColor = .twitterBlue
         navigationController?.navigationBar.barStyle = .black
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.tintColor = .white
         
         navigationItem.title = "Edit Profile"
         
