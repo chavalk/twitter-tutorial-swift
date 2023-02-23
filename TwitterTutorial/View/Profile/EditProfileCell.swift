@@ -25,6 +25,7 @@ class EditProfileCell: UITableViewCell {
         tf.textAlignment = .left
         tf.textColor = .twitterBlue
         tf.addTarget(self, action: #selector(handleUpdateUserInfo), for: .editingDidEnd)
+        tf.text = "Test User Attribute"
         return tf
     }()
     
@@ -46,6 +47,9 @@ class EditProfileCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         titleLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 12, paddingLeft: 16)
+        
+        contentView.addSubview(infoTextField)
+        infoTextField.anchor(top: topAnchor, left: titleLabel.rightAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 4, paddingLeft: 16, paddingRight: 8)
     }
     
     required init?(coder: NSCoder) {
