@@ -32,6 +32,10 @@ class EditProfileController: UITableViewController {
     
     // MARK: - Selectors
     
+    @objc func handleCancel() {
+        dismiss(animated: true)
+    }
+    
     // MARK: - API
     
     // MARK: - Helpers
@@ -42,5 +46,7 @@ class EditProfileController: UITableViewController {
         navigationController?.navigationBar.isTranslucent = false
         
         navigationItem.title = "Edit Profile"
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
     }
 }
