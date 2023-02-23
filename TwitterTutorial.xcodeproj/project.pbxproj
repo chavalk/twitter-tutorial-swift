@@ -129,6 +129,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE28C66229A7347400252AB3 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BE714A96298B7070004C4185 /* ProfileHeader.swift */,
+				BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */,
+				BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		BEA715D12981EE79001676A8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,11 +237,9 @@
 		BEE599F1297FA21200518557 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BE28C66229A7347400252AB3 /* Profile */,
 				BE446EDC298A11B900276981 /* CaptionTextView.swift */,
 				BE714A90298AFF18004C4185 /* TweetCell.swift */,
-				BE714A96298B7070004C4185 /* ProfileHeader.swift */,
-				BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */,
-				BE295513298DD31A00BE8BF0 /* ProfileFilterCell.swift */,
 				BE8CAB2D2993104A00F3DA70 /* UserCell.swift */,
 				BE12EF612994A0D500B37938 /* TweetHeader.swift */,
 				BEC2CBDB299864BC00308965 /* ActionSheetCell.swift */,
