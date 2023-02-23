@@ -17,6 +17,16 @@ class EditProfileCell: UITableViewCell {
         return label
     }()
     
+    lazy var infoTextField: UITextField = {
+        let tf = UITextField()
+        tf.borderStyle = .none
+        tf.font = UIFont.systemFont(ofSize: 14)
+        tf.textAlignment = .left
+        tf.textColor = .twitterBlue
+        tf.addTarget(self, action: #selector(handleUpdateUserInfo), for: .editingDidEnd)
+        return tf
+    }()
+    
     // MARK: - Lifecycle
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
