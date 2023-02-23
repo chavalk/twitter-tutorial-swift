@@ -36,6 +36,10 @@ class EditProfileController: UITableViewController {
         dismiss(animated: true)
     }
     
+    @objc func handleDone() {
+        dismiss(animated: true)
+    }
+    
     // MARK: - API
     
     // MARK: - Helpers
@@ -48,5 +52,8 @@ class EditProfileController: UITableViewController {
         navigationItem.title = "Edit Profile"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 }
