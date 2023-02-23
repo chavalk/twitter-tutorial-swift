@@ -84,6 +84,13 @@ extension EditProfileController {
     }
 }
 
+extension EditProfileController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let option = EditProfileOptions(rawValue: indexPath.row) else { return 0 }
+        return option == .bio ? 100 : 48
+    }
+}
+
 extension EditProfileController: EditProfileHeaderDelegate {
     func didTapChangeProfilePhoto() {
         print("DEBUG: Handle change photo...")
