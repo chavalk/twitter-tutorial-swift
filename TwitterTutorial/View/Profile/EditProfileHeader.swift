@@ -16,6 +16,7 @@ class EditProfileHeader: UIView {
     // MARK: - Properties
     
     private let user: User
+    weak var delegate: EditProfileHeaderDelegate?
     
     let profileImageView: UIImageView = {
         let iv = UIImageView()
@@ -61,6 +62,6 @@ class EditProfileHeader: UIView {
     // MARK: - Selector
     
     @objc func handleChangeProfilePhoto() {
-        
+        delegate?.didTapChangeProfilePhoto()
     }
 }
