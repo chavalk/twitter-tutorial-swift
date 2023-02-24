@@ -11,6 +11,10 @@ class EditProfileCell: UITableViewCell {
     
     // MARK: - Properties
     
+    var viewModel: EditProfileViewModel? {
+        didSet { configure() }
+    }
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
