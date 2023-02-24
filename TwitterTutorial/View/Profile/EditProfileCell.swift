@@ -70,4 +70,11 @@ class EditProfileCell: UITableViewCell {
     }
     
     // MARK: - Helpers
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        
+        infoTextField.isHidden = viewModel.shouldHideTextField
+        bioTextView.isHidden = viewModel.shouldHideTextView
+    }
 }
