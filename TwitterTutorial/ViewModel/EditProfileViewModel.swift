@@ -30,6 +30,14 @@ struct EditProfileViewModel {
         return option.descritpion
     }
     
+    var optionValue: String {
+        switch option {
+        case .username: return user.username
+        case .fullName: return user.fullName
+        case.bio: return user.bio
+        }
+    }
+    
     var shouldHideTextField: Bool {
         return option == .bio
     }
