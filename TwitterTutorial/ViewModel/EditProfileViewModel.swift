@@ -26,6 +26,10 @@ struct EditProfileViewModel {
     private let user: User
     let option: EditProfileOptions
     
+    var titleText: String {
+        return option.descritpion
+    }
+    
     var shouldHideTextField: Bool {
         return option == .bio
     }
