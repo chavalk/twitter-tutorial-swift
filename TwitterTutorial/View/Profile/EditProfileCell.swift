@@ -77,5 +77,8 @@ class EditProfileCell: UITableViewCell {
         bioTextView.isHidden = viewModel.shouldHideTextView
         
         titleLabel.text = viewModel.titleText
+        
+        infoTextField.text = viewModel.optionValue
+        bioTextView.text = viewModel.optionValue
     }
 }
