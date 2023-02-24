@@ -18,7 +18,6 @@ class EditProfileCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14)
-        label.text = "Test Title"
         return label
     }()
     
@@ -76,5 +75,7 @@ class EditProfileCell: UITableViewCell {
         
         infoTextField.isHidden = viewModel.shouldHideTextField
         bioTextView.isHidden = viewModel.shouldHideTextView
+        
+        titleLabel.text = viewModel.titleText
     }
 }
