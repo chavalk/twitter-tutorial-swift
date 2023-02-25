@@ -107,3 +107,10 @@ extension EditProfileController: EditProfileHeaderDelegate {
         present(imagePicker, animated: true)
     }
 }
+
+extension EditProfileController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print("DEBUG: Update profile photo...")
+        dismiss(animated: true)
+    }
+}
