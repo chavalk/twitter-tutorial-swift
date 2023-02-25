@@ -71,7 +71,7 @@ class EditProfileCell: UITableViewCell {
     // MARK: - Selectors
     
     @objc func handleUpdateUserInfo() {
-        
+        delegate?.updateUserInfo(self)
     }
     
     // MARK: - Helpers
