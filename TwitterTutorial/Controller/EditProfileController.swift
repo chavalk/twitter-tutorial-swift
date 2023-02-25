@@ -84,6 +84,8 @@ class EditProfileController: UITableViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return EditProfileOptions.allCases.count
@@ -101,6 +103,8 @@ extension EditProfileController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
 extension EditProfileController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         guard let option = EditProfileOptions(rawValue: indexPath.row) else { return 0 }
@@ -108,11 +112,15 @@ extension EditProfileController {
     }
 }
 
+// MARK: - EditProfileHeaderDelegate
+
 extension EditProfileController: EditProfileHeaderDelegate {
     func didTapChangeProfilePhoto() {
         present(imagePicker, animated: true)
     }
 }
+
+// MARK: - UIImagePickerControllerDelegate
 
 extension EditProfileController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -123,6 +131,8 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
         dismiss(animated: true)
     }
 }
+
+// MARK: - EditProfileCellDelegate
 
 extension EditProfileController: EditProfileCellDelegate {
     func updateUserInfo(_ cell: EditProfileCell) {
@@ -138,10 +148,6 @@ extension EditProfileController: EditProfileCellDelegate {
         case .bio:
             user.bio = cell.bioTextView.text
         }
-        
-        print("DEBUG: Full Name is \(user.fullName)")
-        print("DEBUG: Username is \(user.username)")
-        print("DEBUG: Bio is \(user.bio)")
     }
     
     
