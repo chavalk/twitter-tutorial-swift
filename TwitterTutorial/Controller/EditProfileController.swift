@@ -104,6 +104,6 @@ extension EditProfileController {
 
 extension EditProfileController: EditProfileHeaderDelegate {
     func didTapChangeProfilePhoto() {
-        print("DEBUG: Handle change photo...")
+        present(imagePicker, animated: true)
     }
 }
