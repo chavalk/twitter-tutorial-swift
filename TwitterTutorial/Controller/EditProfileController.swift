@@ -52,6 +52,12 @@ class EditProfileController: UITableViewController {
     
     // MARK: - API
     
+    func updateUserData() {
+        UserService.shared.saveUserData(user: user) { err, ref in
+            print("DEBUG: Did update user info...")
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureNavigationBar() {
