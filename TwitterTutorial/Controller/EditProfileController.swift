@@ -149,6 +149,4 @@ extension EditProfileController: EditProfileCellDelegate {
             user.bio = cell.bioTextView.text
         }
     }
-    
-    
 }
