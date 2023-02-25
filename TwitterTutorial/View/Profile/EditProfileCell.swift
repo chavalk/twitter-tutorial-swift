@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol EdifProfileCellDelegate: class {
+protocol EditProfileCellDelegate: class {
     func updateUserInfo(_ cell: EditProfileCell)
 }
 
@@ -18,6 +18,8 @@ class EditProfileCell: UITableViewCell {
     var viewModel: EditProfileViewModel? {
         didSet { configure() }
     }
+    
+    weak var delegate: EditProfileCellDelegate?
     
     let titleLabel: UILabel = {
         let label = UILabel()
