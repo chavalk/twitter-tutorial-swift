@@ -130,12 +130,17 @@ extension EditProfileController: EditProfileCellDelegate {
         
         switch viewModel.option {
         case .fullName:
-            print("DEBUG: Update user full name")
+            guard let fullName = cell.infoTextField.text else { return }
+            user.fullName = fullName
         case .username:
-            print("DEBUG: Update user username")
+            guard let username = cell.infoTextField.text else { return }
+            user.username = username
         case .bio:
             print("DEBUG: Update user bio")
         }
+        
+        print("DEBUG: Full Name is \(user.fullName)")
+        print("DEBUG: Username is \(user.username)")
     }
     
     
