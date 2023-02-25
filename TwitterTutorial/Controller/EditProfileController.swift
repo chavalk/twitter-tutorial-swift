@@ -15,6 +15,7 @@ class EditProfileController: UITableViewController {
     
     private let user: User
     private lazy var headerView = EditProfileHeader(user: user)
+    private let imagePicker = UIImagePickerController()
     
     // MARK: - Lifecycle
     
