@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EdifProfileCellDelegate: class {
+    func updateUserInfo(_ cell: EditProfileCell)
+}
+
 class EditProfileCell: UITableViewCell {
     
     // MARK: - Properties
