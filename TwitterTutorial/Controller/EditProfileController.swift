@@ -92,6 +92,8 @@ extension EditProfileController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! EditProfileCell
         
+        cell.delegate = self
+        
         guard let option = EditProfileOptions(rawValue: indexPath.row) else { return cell }
         cell.viewModel = EditProfileViewModel(user: user, option: option)
         
@@ -120,4 +122,12 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
         
         dismiss(animated: true)
     }
+}
+
+extension EditProfileController: EditProfileCellDelegate {
+    func updateUserInfo(_ cell: EditProfileCell) {
+        print("DEBUG: Update user here...")
+    }
+    
+    
 }
