@@ -126,7 +126,16 @@ extension EditProfileController: UIImagePickerControllerDelegate, UINavigationCo
 
 extension EditProfileController: EditProfileCellDelegate {
     func updateUserInfo(_ cell: EditProfileCell) {
-        print("DEBUG: Update user here...")
+        guard let viewModel = cell.viewModel else { return }
+        
+        switch viewModel.option {
+        case .fullName:
+            print("DEBUG: Update user full name")
+        case .username:
+            print("DEBUG: Update user username")
+        case .bio:
+            print("DEBUG: Update user bio")
+        }
     }
     
     
