@@ -31,6 +31,7 @@ class EditProfileController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureImagePicker()
         configureNavigationBar()
         configureTableView()
     }
@@ -71,6 +72,11 @@ class EditProfileController: UITableViewController {
         headerView.delegate = self
         
         tableView.register(EditProfileCell.self, forCellReuseIdentifier: reuseIdentifier)
+    }
+    
+    func configureImagePicker() {
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
     }
 }
 
