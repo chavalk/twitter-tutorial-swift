@@ -9,6 +9,10 @@ import UIKit
 
 private let reuseIdentifier = "EditProfileCell"
 
+protocol EditProfileControllerDelegate {
+    func controller(_ controller: EditProfileController, wantsToUpdate user: User)
+}
+
 class EditProfileController: UITableViewController {
     
     // MARK: - Properties
@@ -16,7 +20,6 @@ class EditProfileController: UITableViewController {
     private var user: User
     private lazy var headerView = EditProfileHeader(user: user)
     private let imagePicker = UIImagePickerController()
-    
     private var userInfoChanged = false
     
     private var selectedImage: UIImage? {
