@@ -193,3 +193,13 @@ extension ProfileController : ProfileHeaderDelegate {
         navigationController?.popViewController(animated: true)
     }
 }
+
+// MARK: - EditProfileControllerDelegate
+
+extension ProfileController: EditProfileControllerDelegate {
+    func controller(_ controller: EditProfileController, wantsToUpdate user: User) {
+        controller.dismiss(animated: true)
+        self.user = user
+        self.collectionView.reloadData()
+    }
+}
