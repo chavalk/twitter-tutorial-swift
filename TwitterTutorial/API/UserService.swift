@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import UIKit
 
 typealias DatabaseCompletion = ((Error?, DatabaseReference) -> Void)
 
