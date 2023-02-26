@@ -69,7 +69,7 @@ struct UserService {
         }
     }
     
-    func updateProfileImage(image: UIImage, completion: @escaping(String) -> Void) {
+    func updateProfileImage(image: UIImage, completion: @escaping(URL?) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.3) else { return }
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let fileName = NSUUID().uuidString
@@ -81,7 +81,7 @@ struct UserService {
                 let values = ["profileImageUrl": profileImageUrl]
                 
                 REF_USERS.child(uid).updateChildValues(values) { err, ref in
-                    completion(profileImageUrl)
+                    completion(url)
                 }
             }
         }
