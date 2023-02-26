@@ -57,6 +57,9 @@ class EditProfileController: UITableViewController {
     }
     
     @objc func handleDone() {
+        view.endEditing(true)
+        guard imageChanged || userInfoChanged else { return }
+        
         updateUserData()
     }
     
