@@ -64,16 +64,19 @@ class EditProfileController: UITableViewController {
     
     func updateUserData() {
         if imageChanged && !userInfoChanged {
+            print("DEBUG: Changed image and not data...")
             updateProfileImage()
         }
         
         if userInfoChanged && !imageChanged {
+            print("DEBUG: Changed data and not image...")
             UserService.shared.saveUserData(user: user) { err, ref in
                 self.delegate?.controller(self, wantsToUpdate: self.user)
             }
         }
         
         if userInfoChanged && imageChanged {
+            print("DEBUG: Changed both")
             UserService.shared.saveUserData(user: user) { err, ref in
                 self.updateProfileImage()
             }
