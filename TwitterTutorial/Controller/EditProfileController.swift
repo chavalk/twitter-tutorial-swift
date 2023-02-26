@@ -63,8 +63,18 @@ class EditProfileController: UITableViewController {
     // MARK: - API
     
     func updateUserData() {
-        UserService.shared.saveUserData(user: user) { err, ref in
-            self.delegate?.controller(self, wantsToUpdate: self.user)
+        if imageChanged && !userInfoChanged {
+            
+        }
+        
+        if userInfoChanged && !imageChanged {
+            UserService.shared.saveUserData(user: user) { err, ref in
+                self.delegate?.controller(self, wantsToUpdate: self.user)
+            }
+        }
+        
+        if userInfoChanged && imageChanged {
+            
         }
     }
     
