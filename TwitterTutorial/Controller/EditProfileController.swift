@@ -105,7 +105,6 @@ class EditProfileController: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(handleDone))
-        navigationItem.rightBarButtonItem?.isEnabled = false
     }
     
     func configureTableView() {
