@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "EditProfileCell"
 
-protocol EditProfileControllerDelegate {
+protocol EditProfileControllerDelegate: class {
     func controller(_ controller: EditProfileController, wantsToUpdate user: User)
 }
 
@@ -60,7 +60,7 @@ class EditProfileController: UITableViewController {
     
     func updateUserData() {
         UserService.shared.saveUserData(user: user) { err, ref in
-            delegate?.controller(self, wantsToUpdate: user)
+            self.delegate?.controller(self, wantsToUpdate: self.user)
         }
     }
     
