@@ -78,6 +78,15 @@ class EditProfileController: UITableViewController {
         }
     }
     
+    func updateProfileImage() {
+        guard let image = selectedImage else { return }
+        
+        UserService.shared.updateProfileImage(image: image) { profileImageUrl in
+            self.user.profileImageUrl = profileImageUrl
+            self.delegate?.controller(self, wantsToUpdate: self.user)
+        }
+    }
+    
     // MARK: - Helpers
     
     func configureNavigationBar() {
