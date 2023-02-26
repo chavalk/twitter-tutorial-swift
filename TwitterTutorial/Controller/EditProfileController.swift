@@ -20,8 +20,12 @@ class EditProfileController: UITableViewController {
     private var user: User
     private lazy var headerView = EditProfileHeader(user: user)
     private let imagePicker = UIImagePickerController()
-    private var userInfoChanged = false
     weak var delegate: EditProfileControllerDelegate?
+    private var userInfoChanged = false
+    
+    private var imageChanged: Bool {
+        return selectedImage != nil
+    }
     
     private var selectedImage: UIImage? {
         didSet { headerView.profileImageView.image = selectedImage }
