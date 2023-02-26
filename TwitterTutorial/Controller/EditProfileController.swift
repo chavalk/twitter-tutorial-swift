@@ -60,8 +60,7 @@ class EditProfileController: UITableViewController {
     
     func updateUserData() {
         UserService.shared.saveUserData(user: user) { err, ref in
-            print("DEBUG: Did update user info...")
-            self.dismiss(animated: true)
+            delegate?.controller(self, wantsToUpdate: user)
         }
     }
     
