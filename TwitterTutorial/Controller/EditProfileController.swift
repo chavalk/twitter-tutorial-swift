@@ -64,7 +64,7 @@ class EditProfileController: UITableViewController {
     
     func updateUserData() {
         if imageChanged && !userInfoChanged {
-            
+            updateProfileImage()
         }
         
         if userInfoChanged && !imageChanged {
@@ -74,7 +74,9 @@ class EditProfileController: UITableViewController {
         }
         
         if userInfoChanged && imageChanged {
-            
+            UserService.shared.saveUserData(user: user) { err, ref in
+                self.updateProfileImage()
+            }
         }
     }
     
