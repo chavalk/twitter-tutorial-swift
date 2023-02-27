@@ -15,6 +15,8 @@ class EditProfileFooter: UIView {
     
     // MARK: - Properties
     
+    weak var delegate: EditProfileFooterDelegate?
+    
     private lazy var logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Logout", for: .normal)
