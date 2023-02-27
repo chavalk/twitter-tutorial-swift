@@ -20,9 +20,10 @@ class EditProfileFooter: UIView {
     private lazy var logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Logout", for: .normal)
-        button.setTitleColor(.red, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
-        button.backgroundColor = .systemGroupedBackground
+        button.backgroundColor = .red
+        button.layer.cornerRadius = 5
         return button
     }()
     
@@ -33,7 +34,7 @@ class EditProfileFooter: UIView {
         
         addSubview(logoutButton)
         logoutButton.center(inView: self)
-        logoutButton.setDimensions(width: frame.width, height: 50)
+        logoutButton.setDimensions(width: frame.width - 32, height: 50)
     }
     
     required init?(coder: NSCoder) {
