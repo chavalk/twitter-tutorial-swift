@@ -38,6 +38,6 @@ class EditProfileFooter: UIView {
     // MARK: - Selectors
     
     @objc func handleLogout() {
-        
+        delegate?.handleLogout()
     }
 }
