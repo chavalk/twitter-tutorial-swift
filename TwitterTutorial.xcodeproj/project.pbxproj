@@ -43,6 +43,7 @@
 		BEA715D7298200DF001676A8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA715D6298200DF001676A8 /* Utilities.swift */; };
 		BEA7C2C5299C7FCE0041706C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7C2C4299C7FCE0041706C /* Notification.swift */; };
 		BEA7C2C7299C85A40041706C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7C2C6299C85A40041706C /* NotificationService.swift */; };
+		BEB5F4B429AC56A400E54C57 /* EditProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB5F4B329AC56A400E54C57 /* EditProfileFooter.swift */; };
 		BEC2CBDA299838F000308965 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBD9299838F000308965 /* ActionSheetLauncher.swift */; };
 		BEC2CBDC299864BC00308965 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBDB299864BC00308965 /* ActionSheetCell.swift */; };
 		BEC2CBDE29999B9400308965 /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC2CBDD29999B9400308965 /* ActionSheetViewModel.swift */; };
@@ -99,6 +100,7 @@
 		BEA715D6298200DF001676A8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		BEA7C2C4299C7FCE0041706C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		BEA7C2C6299C85A40041706C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		BEB5F4B329AC56A400E54C57 /* EditProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFooter.swift; sourceTree = "<group>"; };
 		BEC2CBD9299838F000308965 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
 		BEC2CBDB299864BC00308965 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		BEC2CBDD29999B9400308965 /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				BE295511298D99CD00BE8BF0 /* ProfileFilterView.swift */,
 				BE28C66329A738F500252AB3 /* EditProfileHeader.swift */,
 				BE3D5B4C29A7FCC400A38B48 /* EditProfileCell.swift */,
+				BEB5F4B329AC56A400E54C57 /* EditProfileFooter.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				BEC2CBDE29999B9400308965 /* ActionSheetViewModel.swift in Sources */,
 				BE73491B299D48E9006FFD1A /* NotificationCell.swift in Sources */,
 				BE3D5B4B29A7FB2400A38B48 /* EditProfileViewModel.swift in Sources */,
+				BEB5F4B429AC56A400E54C57 /* EditProfileFooter.swift in Sources */,
 				BEA715D52981EF9E001676A8 /* RegistrationController.swift in Sources */,
 				BE6B629B2980DAAE00654BC2 /* FeedController.swift in Sources */,
 				BE295512298D99CD00BE8BF0 /* ProfileFilterView.swift in Sources */,
