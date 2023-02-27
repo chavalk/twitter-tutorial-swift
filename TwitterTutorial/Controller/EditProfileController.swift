@@ -115,7 +115,7 @@ class EditProfileController: UITableViewController {
         tableView.tableHeaderView = headerView
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
         
-        footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
         tableView.tableFooterView = footerView
         
         headerView.delegate = self
