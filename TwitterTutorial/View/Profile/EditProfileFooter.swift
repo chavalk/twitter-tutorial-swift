@@ -22,6 +22,7 @@ class EditProfileFooter: UIView {
         button.setTitle("Logout", for: .normal)
         button.setTitleColor(.red, for: .normal)
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
+        button.backgroundColor = .systemGroupedBackground
         return button
     }()
     
