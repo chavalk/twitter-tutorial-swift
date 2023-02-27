@@ -114,11 +114,11 @@ class EditProfileController: UITableViewController {
     func configureTableView() {
         tableView.tableHeaderView = headerView
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
+        headerView.delegate = self
         
         footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
         tableView.tableFooterView = footerView
-        
-        headerView.delegate = self
+        footerView.delegate = self
         
         tableView.register(EditProfileCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
