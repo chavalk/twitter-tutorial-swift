@@ -33,8 +33,9 @@ class EditProfileFooter: UIView {
         super.init(frame: frame)
         
         addSubview(logoutButton)
-        logoutButton.center(inView: self)
-        logoutButton.setDimensions(width: frame.width - 32, height: 50)
+        logoutButton.anchor(left: leftAnchor, right: rightAnchor, paddingLeft: 16, paddingRight: 16)
+        logoutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        logoutButton.centerY(inView: self)
     }
     
     required init?(coder: NSCoder) {
