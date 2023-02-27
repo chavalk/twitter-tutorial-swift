@@ -114,7 +114,9 @@ class EditProfileController: UITableViewController {
     func configureTableView() {
         tableView.tableHeaderView = headerView
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 180)
-        tableView.tableFooterView = UIView()
+        
+        footerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        tableView.tableFooterView = footerView
         
         headerView.delegate = self
         
