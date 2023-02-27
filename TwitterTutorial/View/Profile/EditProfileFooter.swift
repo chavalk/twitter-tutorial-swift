@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol EditProfileFooterDelegate: class {
+    func handleLogout()
+}
+
 class EditProfileFooter: UIView {
     
     // MARK: - Properties
