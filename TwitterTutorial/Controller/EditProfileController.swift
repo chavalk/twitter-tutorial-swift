@@ -197,3 +197,11 @@ extension EditProfileController: EditProfileCellDelegate {
         }
     }
 }
+
+// MARK: - EditProfileFooterDelegate
+
+extension EditProfileController: EditProfileFooterDelegate {
+    func handleLogout() {
+        print("DEBUG: Handle logout...")
+    }
+}
