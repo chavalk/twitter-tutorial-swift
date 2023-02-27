@@ -30,6 +30,7 @@ class EditProfileFooter: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        addSubview(logoutButton)
         logoutButton.addConstraintsToFillView(self)
     }
     
