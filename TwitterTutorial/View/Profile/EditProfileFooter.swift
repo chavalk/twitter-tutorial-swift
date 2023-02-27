@@ -21,6 +21,7 @@ class EditProfileFooter: UIView {
         let button = UIButton(type: .system)
         button.setTitle("Logout", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
         button.backgroundColor = .red
         button.layer.cornerRadius = 5
