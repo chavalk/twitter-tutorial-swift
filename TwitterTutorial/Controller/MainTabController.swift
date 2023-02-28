@@ -8,6 +8,11 @@
 import UIKit
 import Firebase
 
+enum ActionButtonConfiguration {
+    case tweet
+    case message
+}
+
 class MainTabController: UITabBarController {
 
     // MARK: - Properties
