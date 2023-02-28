@@ -27,6 +27,13 @@ struct NotificationService {
         var notifications = [Notification]()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        REF_NOTIFICATIONS.child(uid).observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.exists() {
+                // This meand user has no notifications
+                completion(notifications)
+            }
+        }
+        
         REF_NOTIFICATIONS.child(uid).observe(.childAdded) { snapshot in
             guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
             guard let uid = dictionary["uid"] as? String else { return }
