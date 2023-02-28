@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "TweetCell"
 private let headerIdentifier = "ProfileHeader"
@@ -206,7 +207,12 @@ extension ProfileController : ProfileHeaderDelegate {
 
 extension ProfileController: EditProfileControllerDelegate {
     func handleLogout() {
-        <#code#>
+        do {
+            try Auth.auth().signOut()
+            print("DEBUG: Did log user out...")
+        } catch let error {
+            print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
+        }
     }
     
     func controller(_ controller: EditProfileController, wantsToUpdate user: User) {
