@@ -17,6 +17,8 @@ class MainTabController: UITabBarController {
 
     // MARK: - Properties
     
+    private var buttonConfig: ActionButtonConfiguration = .tweet
+    
     var user: User? {
         didSet{
             guard let nav = viewControllers?[0] as? UINavigationController else { return }
