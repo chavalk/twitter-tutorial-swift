@@ -119,6 +119,7 @@ extension MainTabController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         let index = viewControllers?.firstIndex(of: viewController)
         let imageName = index == 3 ? "mail" : "new_tweet"
-        self.actionButton.setImage(UIImage(named: imageName), for: .normal)
+        actionButton.setImage(UIImage(named: imageName), for: .normal)
+        buttonConfig = index == 3 ? .message : .tweet
     }
 }
