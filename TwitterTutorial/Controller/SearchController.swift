@@ -66,6 +66,12 @@ class SearchController: UITableViewController {
         }
     }
     
+    // MARK: - Selectors
+    
+    @objc func handleDismissal() {
+        dismiss(animated: true)
+    }
+    
     // MARK: - Helpers
     
     func configureUI() {
@@ -75,6 +81,10 @@ class SearchController: UITableViewController {
         tableView.register(UserCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
+        
+        if config == .messages {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleDismissal))
+        }
     }
     
     func configureSearchController() {
