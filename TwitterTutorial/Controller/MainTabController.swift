@@ -77,7 +77,7 @@ class MainTabController: UITabBarController {
         
         switch buttonConfig {
         case .message:
-            controller = ExploreController()
+            controller = SearchController()
         case .tweet:
             guard let user = user else { return }
             controller = UploadTweetController(user: user, config: .tweet)
@@ -103,7 +103,7 @@ class MainTabController: UITabBarController {
         let feed = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
         
-        let explore = ExploreController()
+        let explore = SearchController()
         let nav2 = templateNavigationController(image: UIImage(named: "search_unselected"), rootViewController: explore)
         
         let notifications = NotificationsController()

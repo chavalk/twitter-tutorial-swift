@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "UserCell"
 
-class ExploreController: UITableViewController {
+class SearchController: UITableViewController {
     
     // MARK: - Properties
     
@@ -73,7 +73,7 @@ class ExploreController: UITableViewController {
 
 // MARK: - UITableViewDelegate/DataSource
 
-extension ExploreController {
+extension SearchController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inSearchMode ? filteredUsers.count : users.count
     }
@@ -94,7 +94,7 @@ extension ExploreController {
 
 // MARK: - UISearchResultsUpdating
 
-extension ExploreController: UISearchResultsUpdating {
+extension SearchController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text?.lowercased() else { return }
         
