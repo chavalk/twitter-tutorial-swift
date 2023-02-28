@@ -9,6 +9,11 @@ import UIKit
 
 private let reuseIdentifier = "UserCell"
 
+enum SearchControllerConfiguration {
+    case messages
+    case userSearch
+}
+
 class SearchController: UITableViewController {
     
     // MARK: - Properties
