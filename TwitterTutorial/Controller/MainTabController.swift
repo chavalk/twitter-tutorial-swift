@@ -82,6 +82,8 @@ class MainTabController: UITabBarController {
     // MARK: - Helpers
     
     func configureUI() {
+        self.delegate = self
+        
         view.addSubview(actionButton)
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
         actionButton.layer.cornerRadius = 56 / 2
@@ -110,5 +112,11 @@ class MainTabController: UITabBarController {
         nav.navigationBar.barTintColor = .white
         self.tabBar.barTintColor = .white
         return nav
+    }
+}
+
+extension MainTabController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let index = viewControllers?.firstIndex(of: viewController)
     }
 }
