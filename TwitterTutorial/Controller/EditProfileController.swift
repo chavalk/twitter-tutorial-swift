@@ -207,7 +207,9 @@ extension EditProfileController: EditProfileFooterDelegate {
         let alert = UIAlertController(title: nil, message: "Are you sure you want to log out?", preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { _ in
-            self.delegate?.handleLogout()
+            self.dismiss(animated: true) {
+                self.delegate?.handleLogout()
+            }
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
