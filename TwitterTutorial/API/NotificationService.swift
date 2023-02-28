@@ -27,21 +27,22 @@ struct NotificationService {
         var notifications = [Notification]()
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        // Make sure notification exists for user
         REF_NOTIFICATIONS.child(uid).observeSingleEvent(of: .value) { snapshot in
             if !snapshot.exists() {
                 // This meand user has no notifications
                 completion(notifications)
-            }
-        }
-        
-        REF_NOTIFICATIONS.child(uid).observe(.childAdded) { snapshot in
-            guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
-            guard let uid = dictionary["uid"] as? String else { return }
-            
-            UserService.shared.fetchUser(uid: uid) { user in
-                let notification = Notification(user: user, dictionary: dictionary)
-                notifications.append(notification)
-                completion(notifications)
+            } else {
+                REF_NOTIFICATIONS.child(uid).observe(.childAdded) { snapshot in
+                    guard let dictionary = snapshot.value as? [String: AnyObject] else { return }
+                    guard let uid = dictionary["uid"] as? String else { return }
+                    
+                    UserService.shared.fetchUser(uid: uid) { user in
+                        let notification = Notification(user: user, dictionary: dictionary)
+                        notifications.append(notification)
+                        completion(notifications)
+                    }
+                }
             }
         }
     }
