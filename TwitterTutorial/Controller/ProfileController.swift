@@ -205,6 +205,10 @@ extension ProfileController : ProfileHeaderDelegate {
 // MARK: - EditProfileControllerDelegate
 
 extension ProfileController: EditProfileControllerDelegate {
+    func handleLogout() {
+        <#code#>
+    }
+    
     func controller(_ controller: EditProfileController, wantsToUpdate user: User) {
         controller.dismiss(animated: true)
         self.user = user
