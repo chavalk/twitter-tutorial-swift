@@ -45,7 +45,9 @@ class FeedController: UICollectionViewController {
     }
     
     @objc func handleProfileImageTap() {
-        print("DEBUG: Show user profile...")
+        guard let user = user else { return }
+        let controller = ProfileController(user: user)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - API
